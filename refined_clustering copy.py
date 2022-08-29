@@ -13,8 +13,6 @@ import pandas as pd
 
 import os
 
-import ModuleLBG as mlbg
-
 '''
 TO DO:
 
@@ -43,6 +41,61 @@ def load_modules(file_path: str) -> tuple:
         all_features = set(row.item()).union(all_features)
 
     return the_modules, all_features
+
+def process_data(split_module_data: pd.DataFrame, center_method: str) -> list:
+
+    X = np.array(split_module_data)
+
+    normalized_data = []
+
+    if center_method == 'flag_median' or center_method == 'flag_mean':
+        #make unit vectors
+        for row in X.T:
+            row_norm = np.linalg.norm(row)
+            if row_norm != 0:
+                normalized_data.append(np.expand_dims(row / row_norm, axis = 1))
+            else:
+                print('zero column in module data. this column was removed.')
+    elif center_method == 'eigengene':
+        #mean center the columns
+        p = X.shape[0]
+        column_means = np.repeat(np.expand_dims(np.mean(X, axis = 0), axis = 1).T, p, axis = 0)
+        X = X - column_means
+        normalized_data = [np.expand_dims(d, axis = 1) for d in X.T]
+    else:
+        #no normalization
+        normalized_data = [np.expand_dims(d, axis = 1) for d in X.T]
+
+
+    return normalized_data
+
+def initialize_centers(the_modules: pd.DataFrame, split_module_data: pd.DataFrame, center_method: str) -> list:
+    dimension = int(center_method[-1])
+
+    initial_centers = []
+    for _, module in the_modules.iterrows():
+
+        module_features = module.item()
+        module_data = split_module_data[module_features]
+
+        #change this depending on method
+        module_data = [np.expand_dims(m, axis = 1) for m in np.array(module_data).T]
+        
+
+        if center_method[:-1] == 'eigengene':
+            center = ca.eigengene(module_data, dimension)
+        else:
+            module_data = [d/np.linalg.norm(d) for d in module_data]
+
+            opt_dim = ca.find_optimal_dimension(module_data)
+            print(opt_dim)
+            if center_method[:-1] == 'flag_mean':
+                center = ca.flag_mean(module_data, dimension)
+            elif center_method[:-1] == 'flag_median':
+                center = ca.irls_flag(module_data, dimension, 50, 'sine')[0]
+
+        initial_centers.append(center)
+    return initial_centers
 
 def save_modules(normalized_data: list, split_module_data: pd.DataFrame, centers: list, save_path: str) -> None:
     the_modules = pd.DataFrame(columns = ['Feature Set'])
@@ -95,17 +148,9 @@ def refined_modules(split_data: pd.DataFrame, module_path: str, center_methods: 
 
         save_path =  f'{save_path1}/{split_path[3][:-4]}.csv'
 
-        #make index here! this is who's in what module
-        #index =
-
-        normalized_split_data = mlbg.process_data(np.array(split_data), center_method)
-        initial_centers = mlbg.calc_centers(normalized_split_data, index)
-        my_mlbg = mlbg.ModuleLBG(center_method = center_method[:-1], dimension = center_method[-1],
-                centers = initial_centers, distance = 'correlation')
-        my_mlbg.fit_transform(normalized_split_data)
-
-        final_centers = my_mlbg.centers_
-
+        normalized_split_data = process_data(split_data, center_method)
+        initial_centers = initialize_centers(the_modules, normalized_split_data, center_method)
+        final_centers = run_lbg_clustering(normalized_split_data, initial_centers, center_method)
         save_modules(normalized_split_data, split_data, final_centers, save_path)
         
     print('foo')
