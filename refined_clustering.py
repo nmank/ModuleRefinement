@@ -1,8 +1,6 @@
-import sys
-
-sys.path.append('/home/katrina/a/mankovic/FlagIRLS')
-
 import center_algorithms as ca
+
+import utils as utl
 
 import orthrus
 from orthrus import core
@@ -71,7 +69,7 @@ def process_data(split_module_data: pd.DataFrame, center_method: str) -> list:
 
     return normalized_data
 
-def initialize_centers(the_modules: pd.DataFrame, split_module_data: pd.DataFrame, center_method: str, labels: np.array = None) -> list:
+def initialize_centers(the_modules: pd.DataFrame, split_module_data: pd.DataFrame, center_method: str) -> list:
     dimension = int(center_method[-1])
 
     initial_centers = []
@@ -86,8 +84,6 @@ def initialize_centers(the_modules: pd.DataFrame, split_module_data: pd.DataFram
 
         if center_method[:-1] == 'eigengene':
             center = ca.eigengene(module_data, dimension)
-        elif center_method[:-1] == 'zobs_eigengene':
-            center = ca.zobs_eigengene(module_data, dimension, labels)
         else:
             module_data = [d/np.linalg.norm(d) for d in module_data]
 
@@ -137,85 +133,83 @@ def run_lbg_clustering(normalized_data: list, initial_centers: list, center_meth
     centers = outstuff[0]
     return centers
 
+def refined_modules(split_data: pd.DataFrame, module_path: str, center_methods: list = []):
+    split_path = module_path.split('/')
+    save_prefix = 
+
+    the_modules = load_modules(module_path)
+    for center_method in center_methods:
+        save_path0 = f'./refined_modules/{center_method}'
+        if not os.isdir(save_path0):
+            os.mkdir(save_path0)
+        
+        save_path1 = f'{save_path0}/{split_path[2]}'
+        if not os.isdir(save_path1):
+            os.mkdir(save_path1)
+
+        save_path =  f'{save_path1}/{split_path[3][:-4]}.csv'
+
+        normalized_split_data = process_data(split_data, center_method)
+        initial_centers = initialize_centers(the_modules, normalized_split_data, center_method)
+        final_centers = run_lbg_clustering(normalized_split_data, initial_centers, center_method)
+        save_modules(normalized_split_data, split_data, final_centers, save_path)
+        
+    print('foo')
 
 if __name__ == '__main__':
-    project_name = 'Z75'
-    do_AD = True
-    modules_directory = '/data4/zoetis/shared/mank_experiments/figures'
-    figures_or_dump = 'dump'
 
-    # center_methods = ['eigengene1', 
-    #                   'flag_mean1', 
-    #                   'flag_median1', 
-    #                   'eigengene4',
-    #                   'flag_mean4',
-    #                   'flag_median4']
-    center_methods = ['eigengene8',
-                      'flag_mean8',
-                      'flag_median8']
-    # center_methods = ['zobs_eigengene1']
-    # center_methods = ['flag_median0']
+    center_methods = ['eigengene1', 
+                      'flag_mean1', 
+                      'flag_median1', 
+                      'eigengene4',
+                      'flag_mean4',
+                      'flag_median4']
 
+    prms = {}
 
-    #build directories
-    for center_method in center_methods:
-        if do_AD:
-            out_directory =f'/data4/zoetis/shared/mank_experiments/{figures_or_dump}/{project_name}/AD_{center_method}_modules'
-        else:
-            out_directory =f'/data4/zoetis/shared/mank_experiments/{figures_or_dump}/{project_name}/{center_method}_modules'
+    data_dir = './data/'
+    for file_name in os.listdir(data_dir):
 
-        try:
-            os.mkdir(out_directory)
-        except FileExistsError:
-            print('Directory Exists')
+        if 'label' not in file_name:
 
+            print('------------------------')
+            print(f'computing {file_name[:-4]} modules')
 
-    data, labels, skf = load_data(project = project_name)
-
-    fold_number = 0
-    for train_index, test_index in skf.split(data, labels):
-
-        split_data = data.iloc[train_index]  
-
-        if do_AD == True:
-            split_data = split_data[labels == 'AD']
-
-        split_labels = np.array([int(l == 'AD') for l in labels[train_index]])
-
-        if do_AD:
-            module_file_path = f'{modules_directory}/{project_name}/AD_wgcna_modules/modules_fold{fold_number}.pickle'
-        else:
-            module_file_path = f'{modules_directory}/{project_name}/wgcna_modules/modules_fold{fold_number}.pickle'
-
-        the_modules, all_features = load_modules(module_file_path)
-
-        split_module_data = split_data[list(all_features)] #maybe not necessary
-        
-        
-
-        for center_method in center_methods:
-
-            print(f'fold {fold_number} with method {center_method} started')
-
-            normalized_data = process_data(split_module_data, center_method[:-1])
-
-            if center_method[-1] == '0':
-                opt_dim = ca.find_optimal_dimension(normalized_data)
-                print(f'optimal dimension is {opt_dim}')
-                center_method = center_method[:-1] + str(opt_dim)
-
-            initial_centers = initialize_centers(the_modules, split_module_data, center_method, split_labels)
-
-            centers = run_lbg_clustering(normalized_data, initial_centers, center_method, split_labels)
-
-            if do_AD:
-                out_directory =f'/data4/zoetis/shared/mank_experiments/{figures_or_dump}/{project_name}/AD_{center_method}_modules'
+            if 'gse' in file_name:
+                species = 'human'
             else:
-                out_directory =f'/data4/zoetis/shared/mank_experiments/{figures_or_dump}/{project_name}/{center_method}_modules'
-            save_path = f'{out_directory}/modules_fold{fold_number}.pickle'
+                species = 'mouse'
 
-            save_modules(normalized_data, split_module_data, centers, save_path)
+            class_data, unique_labels, data_all, labels_all = utl.load_data(data_dir +file_name)
 
+            module_file = f'./modules/all/{file_name}'
+            prms[file_name[:-4]] = refined_modules(data_all, module_file, center_methods)
 
-        fold_number += 1
+            for dta, lbl in zip(class_data, unique_labels):
+                module_file = f'./modules/all/{file_name[:-4]}_{lbl}.csv'
+                prms[file_name[:-4]] = refined_modules(dta, module_file, center_methods)
+
+            print(f'computing 5 fold modules...')
+
+            skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=0)
+            skf.get_n_splits(data_all, labels_all)
+
+            fold_number = 0
+            for train_index, test_index in skf.split(data_all, labels_all):
+                split_data = data_all.iloc[train_index]
+                split_labels = labels_all.iloc[train_index]
+
+                module_file = f'./modules/5fold/fold{fold_number}_{file_name}'
+                prms[file_name[:-4]] = refined_modules(split_data, module_file, center_methods)
+
+                class_data, unique_labels = utl.separate_classes(split_data, split_labels)
+
+                for dta, lbl in zip(class_data, unique_labels):
+                    module_file = f'./modules/5fold/fold{fold_number}_{file_name[:-4]}_{lbl}.csv'
+                    prms[file_name[:-4]] = refined_modules(dta, module_file, center_methods)
+
+                fold_number += 1
+
+    wgcna_rsquared = pd.DataFrame.from_dict(prms, orient="index")
+    wgcna_rsquared.to_csv("wgcna_rquared.csv")
 
