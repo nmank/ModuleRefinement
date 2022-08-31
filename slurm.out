@@ -1,5 +1,11 @@
 ------------------------
 computing gse73072_hrv_48_64 modules
+Python 3.8.8 (default, Apr 13 2021, 19:58:26) 
+Type 'copyright', 'credits' or 'license' for more information
+IPython 8.4.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: Do you really want to exit ([y]/n)? 
+
 [92mSaving data to be True, checking requirements ...[0m
 [1m[94mPre-processing...[0m
 	Detecting genes and samples with too many missing values...
@@ -9,3 +15,224 @@ attempt with 1
 [1m[94mRun WGCNA...[0m
 [96mpickSoftThreshold: calculating connectivity for given powers...[0m
 will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.006317 -0.278556  ...  2366.867272  2311.974966  4474.254962
+1       2  0.195475 -0.927454  ...   780.720796   739.271367  1966.801921
+2       3  0.689478 -1.376244  ...   328.830901   286.106183  1227.578303
+3       4  0.842166 -1.653849  ...   162.677615    123.87484   888.204446
+4       5  0.891843 -1.754607  ...    90.287535     57.58006   683.861815
+5       6  0.896324 -1.792458  ...    54.592732    28.432658   545.250913
+6       7  0.859179 -1.832789  ...    35.244145    14.769803   445.734478
+7       8  0.867657 -1.794472  ...     23.94515     8.041531   371.279362
+8       9  0.869215 -1.759023  ...    16.940941     4.499335   313.807235
+9      10  0.867169 -1.727896  ...    12.383081     2.591135   268.347037
+10     11  0.859142 -1.714329  ...      9.29626     1.519792   231.676416
+11     13  0.871557 -1.654919  ...     5.579113     0.565023   176.646795
+12     15  0.883382  -1.61294  ...     3.569082     0.222962   137.871988
+13     17  0.871936  -1.61086  ...     2.394792     0.091043   109.535114
+14     19  0.880091  -1.58997  ...     1.667555      0.03885    88.247068
+
+[15 rows x 7 columns]
+[92mNo power detected to have scale free network!
+Found the best given power which is 6.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.998  ===>  99% of the (truncated) height range in dendro.
+	Done..
+
+setting RsquaredCut to 0.8
+attempt with 2
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.006317 -0.278556  ...  2366.867272  2311.974966  4474.254962
+1       2  0.195475 -0.927454  ...   780.720796   739.271367  1966.801921
+2       3  0.689478 -1.376244  ...   328.830901   286.106183  1227.578303
+3       4  0.842166 -1.653849  ...   162.677615    123.87484   888.204446
+4       5  0.891843 -1.754607  ...    90.287535     57.58006   683.861815
+5       6  0.896324 -1.792458  ...    54.592732    28.432658   545.250913
+6       7  0.859179 -1.832789  ...    35.244145    14.769803   445.734478
+7       8  0.867657 -1.794472  ...     23.94515     8.041531   371.279362
+8       9  0.869215 -1.759023  ...    16.940941     4.499335   313.807235
+9      10  0.867169 -1.727896  ...    12.383081     2.591135   268.347037
+10     11  0.859142 -1.714329  ...      9.29626     1.519792   231.676416
+11     13  0.871557 -1.654919  ...     5.579113     0.565023   176.646795
+12     15  0.883382  -1.61294  ...     3.569082     0.222962   137.871988
+13     17  0.871936  -1.61086  ...     2.394792     0.091043   109.535114
+14     19  0.880091  -1.58997  ...     1.667555      0.03885    88.247068
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+	Done..
+
+setting RsquaredCut to 0.7
+attempt with 3
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.006317 -0.278556  ...  2366.867272  2311.974966  4474.254962
+1       2  0.195475 -0.927454  ...   780.720796   739.271367  1966.801921
+2       3  0.689478 -1.376244  ...   328.830901   286.106183  1227.578303
+3       4  0.842166 -1.653849  ...   162.677615    123.87484   888.204446
+4       5  0.891843 -1.754607  ...    90.287535     57.58006   683.861815
+5       6  0.896324 -1.792458  ...    54.592732    28.432658   545.250913
+6       7  0.859179 -1.832789  ...    35.244145    14.769803   445.734478
+7       8  0.867657 -1.794472  ...     23.94515     8.041531   371.279362
+8       9  0.869215 -1.759023  ...    16.940941     4.499335   313.807235
+9      10  0.867169 -1.727896  ...    12.383081     2.591135   268.347037
+10     11  0.859142 -1.714329  ...      9.29626     1.519792   231.676416
+11     13  0.871557 -1.654919  ...     5.579113     0.565023   176.646795
+12     15  0.883382  -1.61294  ...     3.569082     0.222962   137.871988
+13     17  0.871936  -1.61086  ...     2.394792     0.091043   109.535114
+14     19  0.880091  -1.58997  ...     1.667555      0.03885    88.247068
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+	Done..
+
+setting RsquaredCut to 0.6
+attempt with 4
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.006317 -0.278556  ...  2366.867272  2311.974966  4474.254962
+1       2  0.195475 -0.927454  ...   780.720796   739.271367  1966.801921
+2       3  0.689478 -1.376244  ...   328.830901   286.106183  1227.578303
+3       4  0.842166 -1.653849  ...   162.677615    123.87484   888.204446
+4       5  0.891843 -1.754607  ...    90.287535     57.58006   683.861815
+5       6  0.896324 -1.792458  ...    54.592732    28.432658   545.250913
+6       7  0.859179 -1.832789  ...    35.244145    14.769803   445.734478
+7       8  0.867657 -1.794472  ...     23.94515     8.041531   371.279362
+8       9  0.869215 -1.759023  ...    16.940941     4.499335   313.807235
+9      10  0.867169 -1.727896  ...    12.383081     2.591135   268.347037
+10     11  0.859142 -1.714329  ...      9.29626     1.519792   231.676416
+11     13  0.871557 -1.654919  ...     5.579113     0.565023   176.646795
+12     15  0.883382  -1.61294  ...     3.569082     0.222962   137.871988
+13     17  0.871936  -1.61086  ...     2.394792     0.091043   109.535114
+14     19  0.880091  -1.58997  ...     1.667555      0.03885    88.247068
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+	Done..
+
+setting RsquaredCut to 0.5
+attempt with 5
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.006317 -0.278556  ...  2366.867272  2311.974966  4474.254962
+1       2  0.195475 -0.927454  ...   780.720796   739.271367  1966.801921
+2       3  0.689478 -1.376244  ...   328.830901   286.106183  1227.578303
+3       4  0.842166 -1.653849  ...   162.677615    123.87484   888.204446
+4       5  0.891843 -1.754607  ...    90.287535     57.58006   683.861815
+5       6  0.896324 -1.792458  ...    54.592732    28.432658   545.250913
+6       7  0.859179 -1.832789  ...    35.244145    14.769803   445.734478
+7       8  0.867657 -1.794472  ...     23.94515     8.041531   371.279362
+8       9  0.869215 -1.759023  ...    16.940941     4.499335   313.807235
+9      10  0.867169 -1.727896  ...    12.383081     2.591135   268.347037
+10     11  0.859142 -1.714329  ...      9.29626     1.519792   231.676416
+11     13  0.871557 -1.654919  ...     5.579113     0.565023   176.646795
+12     15  0.883382  -1.61294  ...     3.569082     0.222962   137.871988
+13     17  0.871936  -1.61086  ...     2.394792     0.091043   109.535114
+14     19  0.880091  -1.58997  ...     1.667555      0.03885    88.247068
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+	Done..
+
+setting RsquaredCut to 0.4
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+File ~/.conda/envs/env1/lib/python3.8/site-packages/pandas/core/indexes/base.py:3621, in Index.get_loc(self, key, method, tolerance)
+   3620 try:
+-> 3621     return self._engine.get_loc(casted_key)
+   3622 except KeyError as err:
+
+File ~/.conda/envs/env1/lib/python3.8/site-packages/pandas/_libs/index.pyx:136, in pandas._libs.index.IndexEngine.get_loc()
+
+File ~/.conda/envs/env1/lib/python3.8/site-packages/pandas/_libs/index.pyx:163, in pandas._libs.index.IndexEngine.get_loc()
+
+File pandas/_libs/hashtable_class_helper.pxi:5198, in pandas._libs.hashtable.PyObjectHashTable.get_item()
+
+File pandas/_libs/hashtable_class_helper.pxi:5206, in pandas._libs.hashtable.PyObjectHashTable.get_item()
+
+KeyError: 'moduleLabels'
+
+The above exception was the direct cause of the following exception:
+
+KeyError                                  Traceback (most recent call last)
+File ~/ModuleRefinement/detect_wgcna_modules.py:78, in <module>
+     75 class_data, unique_labels, data_all, labels_all = utl.load_data(data_dir +file_name)
+     77 out_file = f'./modules/all/{file_name}'
+---> 78 prms[file_name[:-4]] = wgcna_modules(data_all, species, out_file)
+     80 for dta, lbl in zip(class_data, unique_labels):
+     81     out_file = f'./modules/all/{file_name[:-4]}_{lbl}.csv'
+
+File ~/ModuleRefinement/detect_wgcna_modules.py:47, in wgcna_modules(split_data, species, save_path)
+     42 # the_modules = pd.DataFrame(pyWGCNA_Z75.datExpr.var['moduleLabels'])
+     43 
+     44 # the_modules.to_csv(f'modules_fold{fold_number}.csv')
+     46 the_modules = pd.DataFrame(columns = ['Feature Set'])
+---> 47 for lbl in np.unique(pyWGCNA_Z75.datExpr.var['moduleLabels']):
+     48     idx = pyWGCNA_Z75.datExpr.var['moduleLabels'] == lbl
+     49     genes_in_module = list(pyWGCNA_Z75.datExpr.var['moduleLabels'][idx].index)
+
+File ~/.conda/envs/env1/lib/python3.8/site-packages/pandas/core/frame.py:3505, in DataFrame.__getitem__(self, key)
+   3503 if self.columns.nlevels > 1:
+   3504     return self._getitem_multilevel(key)
+-> 3505 indexer = self.columns.get_loc(key)
+   3506 if is_integer(indexer):
+   3507     indexer = [indexer]
+
+File ~/.conda/envs/env1/lib/python3.8/site-packages/pandas/core/indexes/base.py:3623, in Index.get_loc(self, key, method, tolerance)
+   3621     return self._engine.get_loc(casted_key)
+   3622 except KeyError as err:
+-> 3623     raise KeyError(key) from err
+   3624 except TypeError:
+   3625     # If we have a listlike key, _check_indexing_error will raise
+   3626     #  InvalidIndexError. Otherwise we fall through and re-raise
+   3627     #  the TypeError.
+   3628     self._check_indexing_error(key)
+
+KeyError: 'moduleLabels'

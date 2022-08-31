@@ -17,11 +17,12 @@ from sklearn.model_selection import StratifiedKFold
 
 def wgcna_modules(split_data: pd.DataFrame, species: str, save_path: str) -> float:
     split_data_wgcna = split_data.copy()
+    split_data_wgcna.index = [str(s) for s in split_data_wgcna.index]
     split_data_wgcna.reset_index(inplace=True)
-    
+     
     #split_data.to_csv('temp.csv')
     #geneExp = 'temp.csv'
-    #import IPython; IPython.embed()
+    import IPython; IPython.embed()
     pyWGCNA_Z75 = PyWGCNA.WGCNA(name='Z75', species=species, geneExp=split_data_wgcna, save=True)
 
     pyWGCNA_Z75.preprocess()
