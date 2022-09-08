@@ -20,70 +20,11 @@ TO DO:
 
 '''
 
-def load_data(project: str) -> tuple:
-
-    #read dataset
-    ds = dataset.load_dataset('/data4/zoetis/Data/TPM_C1_Z34_Z40_Z42_Z75.ds')
-    sample_ids  = ds.metadata['Project'] == project
-
-    the_dataset = ds.slice_dataset(sample_ids=sample_ids)
-
-    data = the_dataset.data
-
-    skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=0)
-    labels = the_dataset.metadata['Diagnosis']
-    skf.get_n_splits(data, labels)
-    
-    return data, labels, skf
-
-def load_modules(file_path: str) -> tuple:
-    the_modules = helper.load_object(file_path)
-    all_features = set()
-    for _, row in the_modules.iterrows():
-        all_features = set(row.item()).union(all_features)
-
-    return the_modules, all_features
-
-def save_modules(normalized_data: list, split_module_data: pd.DataFrame, centers: list, save_path: str) -> None:
-    the_modules = pd.DataFrame(columns = ['Feature Set'])
-    for module_number in range(len(centers)):
-        d_mat = ca.distance_matrix(normalized_data, centers, True)
-        index  = np.argmax(d_mat, axis = 0)
-
-        genes_in_one_module = list(split_module_data.T[index == module_number].index)
-        row = pd.DataFrame(columns = ['Feature Set'], data = [[genes_in_one_module]])
-        the_modules = pd.concat([the_modules, row])
-        # the_modules = the_modules.append(row, ignore_index = True)
-
-            
-        
-        helper.save_object(the_modules, save_path, overwrite=True)
-
-def run_lbg_clustering(normalized_data: list, initial_centers: list, center_method: str, labels: list = None) -> list:
-    dimension = int(center_method[-1])
-
-    the_opt_type = center_method[:-1]
-
-    if the_opt_type == 'flag_median':
-        the_opt_type = 'sine'
-    elif the_opt_type == 'flag_mean':
-        the_opt_type = 'sinesq'
-    
-    if the_opt_type != 'zobs_eigengene':
-        labels = None
-
-    
-    outstuff = ca.lbg_subspace(normalized_data, epsilon=.0001, centers = initial_centers, 
-                              n_centers = len(initial_centers), opt_type = the_opt_type, 
-                              n_its = 10, seed = 1, r = dimension, similarity = True, labels = labels)
-
-    centers = outstuff[0]
-    return centers
 
 def refined_modules(split_data: pd.DataFrame, module_path: str, center_methods: list = []):
     split_path = module_path.split('/')
 
-    the_modules = load_modules(module_path)
+    the_modules = utl.load_modules(module_path)
     for center_method in center_methods:
         save_path0 = f'./refined_modules/{center_method}'
         if not os.isdir(save_path0):
@@ -106,15 +47,15 @@ def refined_modules(split_data: pd.DataFrame, module_path: str, center_methods: 
 
         restricted_data = split_data[feature_names]
 
-        normalized_split_data = mlbg.process_data(np.array(split_data), center_method)
+        normalized_split_data = mlbg.process_data(np.array(restricted_data), center_method)
         initial_centers = mlbg.calc_centers(normalized_split_data, index)
         my_mlbg = mlbg.ModuleLBG(center_method = center_method[:-1], dimension = center_method[-1],
                 centers = initial_centers, distance = 'correlation')
         my_mlbg.fit_transform(normalized_split_data)
 
-        final_centers = my_mlbg.centers_
+        labels = my_mlbg.get_labels()
 
-        save_modules(normalized_split_data, split_data, final_centers, save_path)
+        utl.save_modules(normalized_split_data, labels, save_path)
         
     print('foo')
 
@@ -123,9 +64,7 @@ if __name__ == '__main__':
     center_methods = ['eigengene1', 
                       'flag_mean1', 
                       'flag_median1', 
-                      'eigengene4',
-                      'flag_mean4',
-                      'flag_median4']
+                      'module_expression']
 
     prms = {}
 
