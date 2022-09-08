@@ -96,7 +96,15 @@ def refined_modules(split_data: pd.DataFrame, module_path: str, center_methods: 
         save_path =  f'{save_path1}/{split_path[3][:-4]}.csv'
 
         #make index here! this is who's in what module
-        #index =
+        feature_names = list(split_data.columns)
+        feature_labels = pd.DataFrame(columns = feature_names, data = np.zeros(len(feature_names)))
+        ii=0
+        for _, m in the_modules.iterrows():
+            feature_labels[m] = ii
+            ii+=1
+        index = feature_labels.iloc[0]
+
+        restricted_data = split_data[feature_names]
 
         normalized_split_data = mlbg.process_data(np.array(split_data), center_method)
         initial_centers = mlbg.calc_centers(normalized_split_data, index)

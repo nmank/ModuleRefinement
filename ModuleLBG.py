@@ -16,8 +16,8 @@ class ModuleLBG(BaseEstimator):
 
 
     def __init__(self, center_method: str = 'eigengene', dimension: int = 1,
-                centers: list = None, distance: str = 'correlation', centrality: str = None,
-                epsilon: float = .0001, errs: list = None, distortions: list = None,
+                centers: list = [], distance: str = 'correlation', centrality: str = '',
+                epsilon: float = .0001, errs: list = [], distortions: list = [],
                 center_seed: int = 1):
         # set params
         self.center_method_ = str(center_method)
@@ -63,8 +63,22 @@ class ModuleLBG(BaseEstimator):
         return self.distortions_
         
     def fit_transform(self, X: np.array, y: np.array = None) -> None:
-        data_list = self.process_data(X)
+        if type(X) == np.array:
+            data_list = self.process_data(X)
+        elif type(X) == list:
+            data_list = X
+        else:
+            print('invalid X type')
         self.lbg(data_list)
+
+    def unitize(self, row: np.array) -> list:
+        #make unit vectors
+        row_norm = np.linalg.norm(row)
+        if row_norm != 0:
+            normalized_point = row / row_norm
+        else:
+            print('zero column in module data. this column was removed.')
+        return normalized_point
 
     def process_data(self, X: np.array) -> list:
 
@@ -73,11 +87,7 @@ class ModuleLBG(BaseEstimator):
         if self.center_method_ == 'flag_median' or self.center_method_ == 'flag_mean':
             #make unit vectors
             for row in X.T:
-                row_norm = np.linalg.norm(row)
-                if row_norm != 0:
-                    normalized_data.append(np.expand_dims(row / row_norm, axis = 1))
-                else:
-                    print('zero column in module data. this column was removed.')
+                normalized_data.append(self.unitize(np.expand_dims(row, axis = 1)))
         elif self.center_method_ == 'eigengene':
             #mean center the columns
             p = X.shape[0]
@@ -94,8 +104,12 @@ class ModuleLBG(BaseEstimator):
 
         if dist_type in ['sine', 'sinesq', 'cosine']:
             dist = ca.calc_error_1_2([X], Y, dist_type)*weight
-        else:
+        elif dist_type in ['wt_euclidean', 'euclidean']:
             dist = np.linalg.norm(X-Y)*weight
+        elif dist_type in ['pearson_dist']:
+            dist = 1-.5*(1+np.corrcoef(X.flatten(),Y.flatten())[0,1])
+        else:
+            print(f'dist_type: {dist_type} not recognized')
 
         return dist
 
@@ -119,7 +133,8 @@ class ModuleLBG(BaseEstimator):
                                'chordal': 'sine',
                                'correlation': 'sinesq',
                                'euclidean': 'euclidean',
-                               'weighted euclidean': 'wt_euclidean'}
+                               'weighted euclidean': 'wt_euclidean',
+                               'pearson cor dist': 'pearson_dist'}
 
         sin_cos = distance_conversion[self.distance_]
 
@@ -128,16 +143,14 @@ class ModuleLBG(BaseEstimator):
 
         for i in range(m):
             for j in range(n):
-                Distances[i,j] = self.calc_distance(self.centers_[j], X[j], sin_cos, weights[j])
+                if 'flag' not in self.center_method_:
+                    point_j =  self.unitize(X[j])
+                else:
+                    point_j = X[j]
+
+                Distances[i,j] = self.calc_distance(self.centers_[i], point_j, sin_cos, weights[j])
                 
         return Distances
-
-    def closest_center(self, d_mat):
-        if self.distance_ == 'correlation':
-            index  = np.argmax(d_mat, axis = 0)
-        else:
-            index = np.argmin(d_mat, axis = 0)
-        return d_mat
 
     def module_expression(self, module_data: list) -> np.array:
         if self.centrality is not None:
@@ -149,17 +162,25 @@ class ModuleLBG(BaseEstimator):
         center = np.expand_dims(np.mean(np.hstack(scored_module),axis = 1),axis = 1)
         return center
 
-    def random_centers(self, n_pts: int):
+    def closest_center(self, d_mat: np.array) -> np.array:
+        #find the closest center for each point
+        if self.distance_ == 'l2 correlation':
+            index  = np.argmax(d_mat, axis = 0)
+        else:
+            index = np.argmin(d_mat, axis = 0)
+        return index
+
+    def random_centers(self, X: list):
         n_centers = len(self.centers_)
         np.random.seed(self.center_seed_)
         self.centers_ = []
         for i in range(n_centers):
-            self.centers_.append(X[np.random.randint(n_pts)])
+            self.centers_.append(X[np.random.randint(i)])
 
     def calc_centers(self, X: list, index: np.array):
         m = len(self.centers_)
         self.centers_ = []
-        for c in range(m):
+        for c in np.unique(index):
             idx = np.where(index == c)[0]
             if len(idx) > 0:
                 if self.center_method_ == 'flag_mean':
@@ -173,6 +194,15 @@ class ModuleLBG(BaseEstimator):
                 else:
                     print('center_method not recognized.')
 
+    def get_labels(self, X: list, weights: np.array = None):
+        #calculate distance matrix
+        d_mat = self.distance_matrix(X, weights)
+
+        #find closest center
+        index = self.closest_center(d_mat)
+        
+        return index
+
     def cluster_purity(self, X: list, labels_true: list) -> float:
         '''
         Calculate the cluster purity of the dataset
@@ -185,14 +215,7 @@ class ModuleLBG(BaseEstimator):
             purity- a float for the cluster purity
         '''
 
-        #calculate distance matrix
-        d_mat = self.distance_matrix(X, self.centers_)
-
-        #find the closest center for each point
-        if self.distance_ == 'correlation':
-            index  = np.argmax(d_mat, axis = 0)
-        else:
-            index = np.argmin(d_mat, axis = 0)
+        index = self.get_labels(X)
         
         count = 0
         for i in range(len(self.centers_)):
@@ -207,7 +230,7 @@ class ModuleLBG(BaseEstimator):
         purity = count/len(self.centers_)
         return purity
 
-    def lbg(self, X: list, n_centers: int, weights: np.array = None) -> tuple:
+    def lbg(self, X: list, weights: np.array = None) -> tuple:
         '''
         LBG clustering with module representatives
         '''
@@ -240,7 +263,7 @@ class ModuleLBG(BaseEstimator):
             old_distortion = new_distortion
 
             #calculate new centers
-            self.calc_centers(index)
+            self.calc_centers(X, index)
 
             #calculate distance matrix
             d_mat = self.distance_matrix(X, weights)
@@ -250,8 +273,10 @@ class ModuleLBG(BaseEstimator):
 
             #new distortion
             new_distortion = np.sum(d_mat[index])
-
+            
             self.distortions_.append(new_distortion)
+
+            print(error)
 
             #termination_criteria
             if new_distortion <0.00000000001:
