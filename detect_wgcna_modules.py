@@ -17,26 +17,25 @@ from sklearn.model_selection import StratifiedKFold
 
 def wgcna_modules(split_data: pd.DataFrame, species: str, save_path: str) -> float:
     split_data_wgcna = split_data.copy()
+    split_data_wgcna.index = [str(s) for s in split_data_wgcna.index]
     split_data_wgcna.reset_index(inplace=True)
-    
+     
     #split_data.to_csv('temp.csv')
     #geneExp = 'temp.csv'
-    #import IPython; IPython.embed()
     pyWGCNA_Z75 = PyWGCNA.WGCNA(name='Z75', species=species, geneExp=split_data_wgcna, save=True)
 
     pyWGCNA_Z75.preprocess()
     rcut_val = .9
-    for i in range(1,6):
+    running = True
+    while running:
         try:
-            print(f'attempt with {i}')
             pyWGCNA_Z75.findModules()
+            running = False
         except:
-            rcut_val = .9-.1*i
+            rcut_val =rcut_val - .1
             print(f'setting RsquaredCut to {rcut_val}')
             pyWGCNA_Z75.RsquaredCut = rcut_val
-            #pyWGCNA_Z75.findModules()
-        else:
-            break
+    pyWGCNA_Z75.findModules()
 
     # the_modules = pd.DataFrame(pyWGCNA_Z75.datExpr.var['moduleLabels'])
 
