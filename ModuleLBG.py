@@ -17,7 +17,7 @@ class ModuleLBG(BaseEstimator):
 
     def __init__(self, center_method: str = 'eigengene', dimension: int = 1,
                 centers: list = [], distance: str = 'correlation', centrality: str = '',
-                epsilon: float = .0001, errs: list = [], distortions: list = [],
+                epsilon: float = .0001, errs: list = [], distortions: list = [], n_centers: int = 0,
                 center_seed: int = 1):
         # set params
         self.center_method_ = str(center_method)
@@ -28,6 +28,7 @@ class ModuleLBG(BaseEstimator):
         self.epsilon_ = float(epsilon)
         self.errs_ = list(errs)
         self.distortions_ = list(distortions)
+        self.n_centers_ = int(n_centers)
         self.center_seed_ = int(center_seed)
 
     @property
@@ -58,6 +59,10 @@ class ModuleLBG(BaseEstimator):
     def errs(self):
         return self.errs_
     
+    @property
+    def n_centers(self):
+        return self.n_centers_
+
     @property
     def distortions(self):
         return self.distortions_
@@ -171,11 +176,10 @@ class ModuleLBG(BaseEstimator):
         return index
 
     def random_centers(self, X: list):
-        n_centers = len(self.centers_)
         np.random.seed(self.center_seed_)
         self.centers_ = []
-        for i in range(n_centers):
-            self.centers_.append(X[np.random.randint(i)])
+        for _ in range(self.n_centers_):
+            self.centers_.append(X[np.random.randint(0,len(X))])
 
     def calc_centers(self, X: list, index: np.array):
         m = len(self.centers_)
@@ -234,14 +238,16 @@ class ModuleLBG(BaseEstimator):
         '''
         LBG clustering with module representatives
         '''
-        n_centers = len(self.centers_)
+        
         n_pts = len(X)
         error = 1
         self.distortions_ = []
 
         #init centers if centers aren't provided
-        if n_centers == 0:
-            self.random_centers(n_pts)
+        if len(self.centers_) == 0:
+            self.random_centers(X)
+        else:
+            self.n_centers_ = len(self.centers_)
 
         #calculate distance matrix
         d_mat = self.distance_matrix(X, weights)
