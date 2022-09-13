@@ -34,7 +34,7 @@ def refined_modules(split_data: pd.DataFrame, module_path: str, center_methods: 
         if not os.path.isdir(save_path1):
             os.mkdir(save_path1)
 
-        save_path =  f'{save_path1}/{split_path[3][:-4]}.csv'
+        save_path =  f'{save_path1}/{split_path[3][:-4]}.pickle'
 
         split_data = split_data.loc[:, (split_data != 0).any(axis=0)] #remove columns with all 0s
 

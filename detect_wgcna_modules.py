@@ -72,11 +72,11 @@ if __name__ == '__main__':
 
             class_data, unique_labels, data_all, labels_all = utl.load_data(data_dir +file_name)
 
-            out_file = f'./modules/all/{file_name}'
+            out_file = f'./modules/all/{file_name[:-4]}.pickle'
             prms[file_name[:-4]] = wgcna_modules(data_all, species, out_file)
 
             for dta, lbl in zip(class_data, unique_labels):
-                out_file = f'./modules/all/{file_name[:-4]}_{lbl}.csv'
+                out_file = f'./modules/all/{file_name[:-4]}_{lbl}.pickle'
                 prms[file_name[:-4]] = wgcna_modules(dta, species, out_file)
 
             print(f'computing 5 fold modules...')
@@ -89,13 +89,13 @@ if __name__ == '__main__':
                 split_data = data_all.iloc[train_index]
                 split_labels = labels_all.iloc[train_index]
 
-                out_file = f'./modules/5fold/fold{fold_number}_{file_name}'
+                out_file = f'./modules/5fold/fold{fold_number}_{file_name[:-4]}.pickle'
                 prms[file_name[:-4]] = wgcna_modules(split_data, species, out_file)
 
                 class_data, unique_labels = utl.separate_classes(split_data, split_labels)
 
                 for dta, lbl in zip(class_data, unique_labels):
-                    out_file = f'./modules/5fold/fold{fold_number}_{file_name[:-4]}_{lbl}.csv'
+                    out_file = f'./modules/5fold/fold{fold_number}_{file_name[:-4]}_{lbl}.pickle'
                     prms[file_name[:-4]] = wgcna_modules(dta, species, out_file)
 
                 fold_number += 1
