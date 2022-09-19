@@ -4,3 +4,4 @@
 ./modules/*
 ./old/*
 ./refined_modules/*
+*.pickle
