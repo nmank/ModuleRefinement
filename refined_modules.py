@@ -25,8 +25,10 @@ def refined_modules(split_data: pd.DataFrame, module_path: str, center_methods: 
     split_path = module_path.split('/')
 
     the_modules, _ = utl.load_modules(module_path)
+    
     for center_method in center_methods:
-        save_path0 = f'./refined_modules/{center_method}'
+        center_method_str = '_'.join(center_method)
+        save_path0 = f'./refined_modules/{center_method_str}'
         if not os.path.isdir(save_path0):
             os.mkdir(save_path0)
         
@@ -49,25 +51,49 @@ def refined_modules(split_data: pd.DataFrame, module_path: str, center_methods: 
 
         restricted_data = split_data[feature_names]
 
-        my_mlbg = mlbg.ModuleLBG(center_method = center_method[:-1], dimension = center_method[-1],
-                distance = 'correlation', centrality = 'degree')
+        if center_method[2] > 1:
+            my_mlbg = mlbg.ModuleLBG(center_method = center_method[0], center_dimension = center_method[1],
+                                 data_dimension = center_method[2], distance = 'max correlation', centrality = 'degree')
+        else:
+            my_mlbg = mlbg.ModuleLBG(center_method = center_method[0], center_dimension = center_method[1],
+                                 data_dimension = center_method[2], distance = 'correlation', centrality = 'degree')
 
         normalized_split_data = my_mlbg.process_data(np.array(restricted_data))
 
-        initial_centers = my_mlbg.calc_centers(normalized_split_data, index)
+        my_mlbg.calc_centers(normalized_split_data, index)
         my_mlbg.fit_transform(normalized_split_data)
 
         labels = my_mlbg.get_labels(normalized_split_data)
 
-        utl.save_modules(restricted_data, labels, save_path)
+        #only save if it converged
+        if my_mlbg.errs_[-1] <= my_mlbg.epsilon[-1]:
+            utl.save_modules(restricted_data, labels, save_path)
+
         
 
 if __name__ == '__main__':
 
-    center_methods = ['eigengene1', 
-                      'flag_mean1', 
-                      'flag_median1', 
-                      'module_expression1']
+    center_methods = [['eigengene',1,1], 
+                      ['flag_mean',1,1], 
+                      ['flag_median',1,1], 
+                      ['module_expression',1,1],
+                      ['eigengene',2,1], 
+                      ['flag_mean',2,1], 
+                      ['flag_median',2,1],
+                      ['eigengene',4,1], 
+                      ['flag_mean',4,1], 
+                      ['flag_median',4,1],
+                      ['eigengene',8,1], 
+                      ['flag_mean',8,1], 
+                      ['flag_median',8,1],
+                      ['flag_mean',1,2], 
+                      ['flag_median',1,2],
+                      ['flag_mean',2,2], 
+                      ['flag_median',2,2],
+                      ['flag_mean',4,2], 
+                      ['flag_median',4,2],
+                      ['flag_mean',8,2], 
+                      ['flag_median',8,2]]
 
     prms = {}
 

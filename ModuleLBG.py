@@ -3,6 +3,9 @@ import graph_tools_construction as gt
 from sklearn.base import BaseEstimator
 import center_algorithms as ca
 import pandas as pd
+from sklearn.neighbors import NearestNeighbors
+
+
 
 '''
 To DO:
@@ -15,13 +18,14 @@ To DO:
 class ModuleLBG(BaseEstimator):
 
 
-    def __init__(self, center_method: str = 'eigengene', dimension: int = 1,
+    def __init__(self, center_method: str = 'eigengene', center_dimension: int = 1, data_dimension: int = 1,
                 centers: list = [], distance: str = 'correlation', centrality: str = '',
                 epsilon: float = .0001, errs: list = [], distortions: list = [], n_centers: int = 0,
                 center_seed: int = 1):
         # set params
         self.center_method_ = str(center_method)
-        self.dimension_ = int(dimension)
+        self.center_dimension_ = int(center_dimension)
+        self.data_dimension_ = int(data_dimension)
         self.centers_ = list(centers)
         self.distance_ = str(distance)
         self.centrality_ = str(centrality)
@@ -36,8 +40,12 @@ class ModuleLBG(BaseEstimator):
         return self.center_method_
 
     @property
-    def dimension(self):
-        return self.dimension_
+    def center_dimension(self):
+        return self.center_dimension_
+
+    @property
+    def data_dimension(self):
+        return self.data_dimension_
   
     @property
     def centers(self):
@@ -90,9 +98,18 @@ class ModuleLBG(BaseEstimator):
         normalized_data = []
 
         if self.center_method_ == 'flag_median' or self.center_method_ == 'flag_mean':
-            #make unit vectors
-            for row in X.T:
-                normalized_data.append(self.unitize(np.expand_dims(row, axis = 1)))
+            if self.data_dimension_ > 1:
+                #make knn subspace reps
+                neigh = NearestNeighbors(n_neighbors = self.data_dimension_, metric = 'cosine')
+                neigh.fit(X.T)
+                nns = neigh.kneighbors(X.T, return_distance=False)    
+                for nn in nns:
+                    subspace = np.linalg.qr(X[:,nn])[0][:,:self.data_dimension_]
+                    normalized_data.append(subspace)
+            else:
+                #make unit vectors
+                for row in X.T:
+                    normalized_data.append(self.unitize(np.expand_dims(row, axis = 1)))
         elif self.center_method_ == 'eigengene':
             #mean center the columns
             p = X.shape[0]
@@ -109,9 +126,12 @@ class ModuleLBG(BaseEstimator):
 
         if dist_type in ['sine', 'sinesq', 'cosine']:
             dist = ca.calc_error_1_2([X], Y, dist_type)*weight
+        elif dist_type == 'min_sinesq':
+            sing_vals = np.linalg.svd(X.T @ Y)[1]
+            dist = 1-np.min(sing_vals)**2
         elif dist_type in ['wt_euclidean', 'euclidean']:
             dist = np.linalg.norm(X-Y)*weight
-        elif dist_type in ['pearson_dist']:
+        elif dist_type  == 'pearson_dist':
             dist = 1-.5*(1+np.corrcoef(X.flatten(),Y.flatten())[0,1])
         else:
             print(f'dist_type: {dist_type} not recognized')
@@ -136,6 +156,7 @@ class ModuleLBG(BaseEstimator):
 
         distance_conversion = {'l2 correlation': 'cosine',
                                'chordal': 'sine',
+                               'max correlation': 'min_sinesq',
                                'correlation': 'sinesq',
                                'euclidean': 'euclidean',
                                'weighted euclidean': 'wt_euclidean',
@@ -175,30 +196,30 @@ class ModuleLBG(BaseEstimator):
             index = np.argmin(d_mat, axis = 0)
         return index
 
-    def random_centers(self, X: list):
+    def random_centers(self, X: list) -> None:
         np.random.seed(self.center_seed_)
         self.centers_ = []
         for _ in range(self.n_centers_):
             self.centers_.append(X[np.random.randint(0,len(X))])
 
-    def calc_centers(self, X: list, index: np.array):
+    def calc_centers(self, X: list, index: np.array) -> None:
         m = len(self.centers_)
         self.centers_ = []
         for c in np.unique(index):
             idx = np.where(index == c)[0]
             if len(idx) > 0:
                 if self.center_method_ == 'flag_mean':
-                    self.centers_.append(ca.flag_mean([X[i] for i in idx], self.dimension_))
+                    self.centers_.append(ca.flag_mean([X[i] for i in idx], self.center_dimension_))
                 elif self.center_method_ == 'eigengene':
-                    self.centers_.append(ca.eigengene([X[i] for i in idx], self.dimension_))
+                    self.centers_.append(ca.eigengene([X[i] for i in idx], self.center_dimension_))
                 elif self.center_method_ == 'flag_median':
-                    self.centers_.append(ca.irls_flag([X[i] for i in idx], self.dimension_, 10, 'sine', 'sine')[0])
+                    self.centers_.append(ca.irls_flag([X[i] for i in idx], self.center_dimension_, 10, 'sine', 'sine')[0])
                 elif self.center_method == 'module_expression':
                     self.centers_.append(self.module_expression([X[i] for i in idx]))
                 else:
                     print('center_method not recognized.')
 
-    def get_labels(self, X: list, weights: np.array = None):
+    def get_labels(self, X: list, weights: np.array = None) -> np.array:
         #calculate distance matrix
         d_mat = self.distance_matrix(X, weights)
 
@@ -234,12 +255,12 @@ class ModuleLBG(BaseEstimator):
         purity = count/len(self.centers_)
         return purity
 
-    def lbg(self, X: list, weights: np.array = None) -> tuple:
+    def lbg(self, X: list, weights: np.array = None) -> bool:
         '''
         LBG clustering with module representatives
         '''
         
-        n_pts = len(X)
+        # n_pts = len(X)
         error = 1
         self.distortions_ = []
 
@@ -265,7 +286,7 @@ class ModuleLBG(BaseEstimator):
         n_itrs = 1
         self.errs_ = []
         while error > self.epsilon and n_itrs <= max_itrs:
-            print(f'iteration {len(self.errs_)}')
+            # print(f'iteration {len(self.errs_)}')
 
             #set new distortion as old one
             old_distortion = new_distortion
@@ -284,8 +305,6 @@ class ModuleLBG(BaseEstimator):
             
             self.distortions_.append(new_distortion)
 
-            print(error)
-
             #termination_criteria
             if new_distortion <0.00000000001:
                 error = 0
@@ -297,3 +316,4 @@ class ModuleLBG(BaseEstimator):
 
         if n_itrs == max_itrs:
             print(f'max iterations of {max_itrs} reached!')
+        
