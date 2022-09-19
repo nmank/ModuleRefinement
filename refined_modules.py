@@ -34,7 +34,7 @@ def refined_modules(split_data: pd.DataFrame, module_path: str, center_methods: 
         if not os.path.isdir(save_path1):
             os.mkdir(save_path1)
 
-        save_path =  f'{save_path1}/{split_path[3][:-4]}.pickle'
+        save_path =  f'{save_path1}/{split_path[3][:-7]}.pickle'
 
         split_data = split_data.loc[:, (split_data != 0).any(axis=0)] #remove columns with all 0s
 
@@ -74,7 +74,7 @@ if __name__ == '__main__':
     data_dir = './data/'
     for file_name in os.listdir(data_dir):
 
-        if 'label' not in file_name and 'gse' not in file_name:
+        if 'label' not in file_name:
 
             print('------------------------')
             print(f'computing {file_name[:-4]} modules')
@@ -84,33 +84,34 @@ if __name__ == '__main__':
             else:
                 species = 'mouse'
 
-            class_data, unique_labels, data_all, labels_all = utl.load_data(data_dir +file_name)
+            if 'salmonella' in file_name:
+                class_data, unique_labels, data_all, labels_all = utl.load_data(data_dir +file_name)
 
-            module_file = f'./modules/all/{file_name}'
-            refined_modules(data_all, module_file, center_methods)
-
-            for dta, lbl in zip(class_data, unique_labels):
-                module_file = f'./modules/all/{file_name[:-4]}_{lbl}.csv'
-                refined_modules(dta, module_file, center_methods)
-
-            print(f'computing 5 fold modules...')
-
-            skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=0)
-            skf.get_n_splits(data_all, labels_all)
-
-            fold_number = 0
-            for train_index, test_index in skf.split(data_all, labels_all):
-                split_data = data_all.iloc[train_index]
-                split_labels = labels_all.iloc[train_index]
-
-                module_file = f'./modules/5fold/fold{fold_number}_{file_name}'
-                refined_modules(split_data, module_file, center_methods)
-
-                class_data, unique_labels = utl.separate_classes(split_data, split_labels)
+                module_file = f'./modules/all/{file_name[:-4]}.pickle'
+                refined_modules(data_all, module_file, center_methods)
 
                 for dta, lbl in zip(class_data, unique_labels):
-                    module_file = f'./modules/5fold/fold{fold_number}_{file_name[:-4]}_{lbl}.csv'
+                    module_file = f'./modules/all/{file_name[:-4]}_{lbl}.pickle'
                     refined_modules(dta, module_file, center_methods)
 
-                fold_number += 1
+                print(f'computing 5 fold modules...')
+
+                skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=0)
+                skf.get_n_splits(data_all, labels_all)
+
+                fold_number = 0
+                for train_index, test_index in skf.split(data_all, labels_all):
+                    split_data = data_all.iloc[train_index]
+                    split_labels = labels_all.iloc[train_index]
+
+                    module_file = f'./modules/5fold/fold{fold_number}_{file_name[:-4]}.pickle'
+                    refined_modules(split_data, module_file, center_methods)
+
+                    class_data, unique_labels = utl.separate_classes(split_data, split_labels)
+
+                    for dta, lbl in zip(class_data, unique_labels):
+                        module_file = f'./modules/5fold/fold{fold_number}_{file_name[:-4]}_{lbl}.pickle'
+                        refined_modules(dta, module_file, center_methods)
+
+                    fold_number += 1
 

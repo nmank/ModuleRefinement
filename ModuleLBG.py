@@ -260,9 +260,11 @@ class ModuleLBG(BaseEstimator):
 
         self.distortions_.append(new_distortion)
 
+        max_itrs = 20        
 
+        n_itrs = 1
         self.errs_ = []
-        while error > self.epsilon:
+        while error > self.epsilon and n_itrs <= max_itrs:
             print(f'iteration {len(self.errs_)}')
 
             #set new distortion as old one
@@ -290,4 +292,8 @@ class ModuleLBG(BaseEstimator):
             else:
                 error = np.abs(new_distortion - old_distortion)/old_distortion
             self.errs_.append(error)
+            
+            n_itrs +=1
 
+        if n_itrs == max_itrs:
+            print(f'max iterations of {max_itrs} reached!')
