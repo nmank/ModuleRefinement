@@ -29,4 +29,3 @@ Also make sure that all modulefiles written in TCL start with the string
 
 
 
-slurmstepd: error: *** JOB 229171 ON node1 CANCELLED AT 2022-09-19T08:41:16 ***

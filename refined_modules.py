@@ -27,7 +27,7 @@ def refined_modules(split_data: pd.DataFrame, module_path: str, center_methods: 
     the_modules, _ = utl.load_modules(module_path)
     
     for center_method in center_methods:
-        center_method_str = '_'.join(center_method)
+        center_method_str = f'{center_method[0]}_{center_method[1]}_{center_method[2]}'
         save_path0 = f'./refined_modules/{center_method_str}'
         if not os.path.isdir(save_path0):
             os.mkdir(save_path0)
@@ -66,7 +66,7 @@ def refined_modules(split_data: pd.DataFrame, module_path: str, center_methods: 
         labels = my_mlbg.get_labels(normalized_split_data)
 
         #only save if it converged
-        if my_mlbg.errs_[-1] <= my_mlbg.epsilon[-1]:
+        if my_mlbg.errs_[-1] <= my_mlbg.epsilon_:
             utl.save_modules(restricted_data, labels, save_path)
 
         
@@ -110,7 +110,7 @@ if __name__ == '__main__':
             else:
                 species = 'mouse'
 
-            if 'salmonella' in file_name:
+            if 'salmonella' not in file_name:
                 class_data, unique_labels, data_all, labels_all = utl.load_data(data_dir +file_name)
 
                 module_file = f'./modules/all/{file_name[:-4]}.pickle'
