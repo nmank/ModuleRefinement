@@ -48,7 +48,8 @@ def wgcna_modules(split_data: pd.DataFrame, species: str, save_path: str) -> flo
         row = pd.DataFrame(columns = ['Feature Set'], data = [[genes_in_module]])
         the_modules = the_modules.append(row, ignore_index = True)
 
-    helper.save_object(the_modules, save_path, overwrite=False)
+    #uncomment the line below	
+    #helper.save_object(the_modules, save_path, overwrite=False)
     return rcut_val
 
 
@@ -77,7 +78,7 @@ if __name__ == '__main__':
 
             for dta, lbl in zip(class_data, unique_labels):
                 out_file = f'./modules/all/{file_name[:-4]}_{lbl}.pickle'
-                prms[file_name[:-4]] = wgcna_modules(dta, species, out_file)
+                prms[file_name[:-4]+'_'+str(lbl)] = wgcna_modules(dta, species, out_file)
 
             print(f'computing 5 fold modules...')
 
@@ -90,13 +91,13 @@ if __name__ == '__main__':
                 split_labels = labels_all.iloc[train_index]
 
                 out_file = f'./modules/5fold/fold{fold_number}_{file_name[:-4]}.pickle'
-                prms[file_name[:-4]] = wgcna_modules(split_data, species, out_file)
+                prms[str(fold_number) + '_' + file_name[:-4]] = wgcna_modules(split_data, species, out_file)
 
                 class_data, unique_labels = utl.separate_classes(split_data, split_labels)
 
                 for dta, lbl in zip(class_data, unique_labels):
                     out_file = f'./modules/5fold/fold{fold_number}_{file_name[:-4]}_{lbl}.pickle'
-                    prms[file_name[:-4]] = wgcna_modules(dta, species, out_file)
+                    prms[str(fold_number) + '_' + file_name[:-4]+'_'+str(lbl)] = wgcna_modules(dta, species, out_file)
 
                 fold_number += 1
 

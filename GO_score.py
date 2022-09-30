@@ -1,6 +1,6 @@
-import sys
+#import sys
 
-sys.path.append('/home/katrina/a/mankovic/FlagIRLS')
+#sys.path.append('/home/katrina/a/mankovic/FlagIRLS')
 
 import center_algorithms as ca
 
