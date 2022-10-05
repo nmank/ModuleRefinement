@@ -1,6 +1,6 @@
 #https://github.com/ekehoe32/orthrus
-import sys
-sys.path.append('/home/katrina/a/mankovic/ZOETIS/Fall2021/Orthrus/orthrus')
+#import sys
+#sys.path.append('/home/katrina/a/mankovic/ZOETIS/Fall2021/Orthrus/orthrus')
 
 import orthrus
 from orthrus import core
@@ -29,18 +29,34 @@ import os
 import utils as utl
 
 
-import sys
-sys.path.append('/home/katrina/a/mankovic/')
-from PathwayAnalysis.SpectralClustering import SpectralClustering
+#import sys
+#sys.path.append('/home/katrina/a/mankovic/')
+#from PathwayAnalysis.SpectralClustering import SpectralClustering
 
 from sklearn.model_selection import StratifiedKFold
 
 
-
+def shorten_data_name(data_name):
+    if 'gse' in data_name:
+        if 'True' in data_name:
+            data_name = data_name[:-5]
+        if 'False' in data_name:
+            data_name = data_name[:-6]
+    if 'salmonella' in data_name:
+        if 'tolerant' in data_name:
+            data_name = data_name[:-9]
+        if 'susceptible' in data_name:
+            data_name = data_name[:-12]
+    if 'ebola' in data_name:
+        if 'Lethal' in data_name:
+            data_name = data_name[:-7]
+        if 'Tolerant' in data_name:
+            data_name = data_name[:-9]      
+    return data_name
+      
 
 def loso_test(ds, fold_number):
-
-    supervised_attr = 'Diagnosis'
+    supervised_attr = 'label'
 
     partitioner = StratifiedKFold(n_splits=5, shuffle=True, random_state=0)
     partition_5fold = Partition(process=partitioner,
@@ -76,12 +92,16 @@ def loso_test(ds, fold_number):
             pred_attr=supervised_attr,
             verbosity=0)
 
-    processes=(partition_5fold, hf, log2, std, svm_model, bsr)
+    if 'susceptible' in list(ds.metadata['label']): #no log normalization for salmonella
+        processes=(partition_5fold, hf, std, svm_model, bsr)
+    else:    
+        processes=(partition_5fold, hf, log2, std, svm_model, bsr)
 
-    pipeline = Pipeline(processes=processes)
+    pipeline = Pipeline(processes=processes, verbosity = 0)
+
+    ds.metadata['label'] = ds.metadata['label'].astype('str')
 
     pipeline.run(ds, checkpoint=False)
-
 
     fold_test_bsr = bsr.collapse_results()['class_pred_scores'].loc['Test'].loc[f'batch_{fold_number}']
     # train_scores = scores.loc['Train']
@@ -106,8 +126,7 @@ if __name__ == '__main__':
             data_all.index.names = ['SampleID']
             labels_all = pd.read_csv(f'{data_name}_labels.csv', index_col = 0)
             ds = DS(data = data_all, metadata = labels_all)
-            datasets[data_name] = ds
-    
+            datasets[data_name[7:]] = ds
 
 
     dir_path = './refined_modules/'
@@ -121,16 +140,17 @@ if __name__ == '__main__':
         data_dimension = module_type[-1]
         center_dimension = module_type[-3]
 
-        for folds in os.listdir(module_type_dir): #all or 5fold
-            
+        #for folds in os.listdir(module_type_dir): #all or 5fold
+        for folds in ['5fold']: #5fold    
             folder_path = f'{module_type_dir}/{folds}'
 
             for dataset_name in os.listdir(folder_path):
                 module_path = f'{folder_path}/{dataset_name}'
 
+
                 if 'fold' in dataset_name:
-                    dataset_name = dataset_name[6:-7]
                     fold = dataset_name[4]
+                    dataset_name = dataset_name[6:-7]
                 else:
                     dataset_name = dataset_name[:-7]
                     fold = 'all'
@@ -139,8 +159,9 @@ if __name__ == '__main__':
                     organism = 'human'
                 else:
                     organism = 'mouse'
-
-                ds = datasets[dataset_name]
+                
+                data_name = shorten_data_name(dataset_name)
+                ds = datasets[data_name]
 
                 the_modules, all_features = utl.load_modules(module_path)
 
@@ -161,7 +182,6 @@ if __name__ == '__main__':
                                                  data_dimension, center_dimension, fold,
                                                  module_number, bsr]])
                     svm_results = svm_results.append(row, ignore_index = True)
-
                     module_number +=1
 
 
@@ -169,16 +189,16 @@ if __name__ == '__main__':
     algorithm = 'WGCNA'
     
 
-    for folds in os.listdir(module_type_dir): #all or 5fold
-        
+    #for folds in os.listdir(module_type_dir): #all or 5fold
+    for folds in ['5fold']: #5fol   
         folder_path = f'{module_type_dir}/{folds}'
 
         for dataset_name in os.listdir(folder_path):
             module_path = f'{folder_path}/{dataset_name}'
 
             if 'fold' in dataset_name:
-                dataset_name = dataset_name[6:-7]
                 fold = dataset_name[4]
+                dataset_name = dataset_name[6:-7]
             else:
                 dataset_name = dataset_name[:-7]
                 fold = 'all'
@@ -188,14 +208,21 @@ if __name__ == '__main__':
             else:
                 organism = 'mouse'
 
+            data_name = shorten_data_name(dataset_name)
+            ds = datasets[data_name]
+
             the_modules, all_features = utl.load_modules(module_path)
 
             module_number = 0
             for module in the_modules.iterrows():
+                print('.')
+                print('.')
+                print('.')
+                print(fold)
                 mod_sig = 0
                 module_genes = module[1].item()   
 
-                slice_dataset = ds.slice_dataset(feature_ids=list(module_genes))
+                slice_dataset = ds.slice_dataset(feature_ids=np.array(module_genes))
 
                 try:
                     bsr = loso_test(slice_dataset, fold)
@@ -207,7 +234,7 @@ if __name__ == '__main__':
                                                 data_dimension, center_dimension, fold,
                                                 module_number, bsr]])
                 svm_results = svm_results.append(row, ignore_index = True)
-
+                print(svm_results)
                 module_number +=1
 
 
