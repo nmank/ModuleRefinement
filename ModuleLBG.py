@@ -182,6 +182,10 @@ class ModuleLBG(BaseEstimator):
         if self.centrality is not None:
             A = gt.adjacency_matrix(np.hstack(module_data), msr = 'correlation')
             scores = gt.centrality_scores(A, centrality = self.centrality_)
+            max_score = np.max(scores) 
+            if max_score != 0:
+                scores = scores / max_score
+
             scored_module = [scores[i]*module_data[i] for i in range(len(module_data))]
         else:
             scored_module = module_data
@@ -214,7 +218,7 @@ class ModuleLBG(BaseEstimator):
                     self.centers_.append(ca.eigengene([X[i] for i in idx], self.center_dimension_))
                 elif self.center_method_ == 'flag_median':
                     self.centers_.append(ca.irls_flag([X[i] for i in idx], self.center_dimension_, 10, 'sine', 'sine')[0])
-                elif self.center_method == 'module_expression':
+                elif self.center_method == 'module_expression': 
                     self.centers_.append(self.module_expression([X[i] for i in idx]))
                 else:
                     print('center_method not recognized.')
