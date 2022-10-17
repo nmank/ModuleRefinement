@@ -250,7 +250,7 @@ def flag_mean(data: list, r: int) -> np.array:
     return mean
 
 
-def eigengene(data: list, r: int) -> np.array:
+def eigengene(data: list, r: int, evr = False) -> np.array:
 
     #mean center
     p = len(data)
@@ -259,9 +259,18 @@ def eigengene(data: list, r: int) -> np.array:
     X = X - row_means
 
     #compute eigengene
-    the_eigengene = np.linalg.svd(X @ X.T)[0][:,:r]
+    [the_eigengenes, sing_vals, _] = np.linalg.svd(X)
+    the_eigengene = the_eigengenes[:,:r]
+
+    evals = sing_vals**2
+
+
+    if evr:
+        explained_variance_ratio = np.sum(evals[:r])/np.sum(evals)
+        return the_eigengene, explained_variance_ratio
     
-    return the_eigengene
+    else:
+        return the_eigengene
 
 
 def zobs_eigengene(data: list, r: int, labels: np.array) -> np.array:
