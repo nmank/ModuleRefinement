@@ -168,13 +168,17 @@ class ModuleLBG(BaseEstimator):
             weights = np.ones(n)
 
         for i in range(m):
+            if 'module_expression' in self.center_method_:
+                center_i = self.unitize(self.centers_[i])
+            else:
+                center_i = self.centers_[i]   
             for j in range(n):
                 if 'flag' not in self.center_method_:
                     point_j =  self.unitize(X[j])
                 else:
                     point_j = X[j]
 
-                Distances[i,j] = self.calc_distance(self.centers_[i], point_j, sin_cos, weights[j])
+                Distances[i,j] = self.calc_distance(center_i, point_j, sin_cos, weights[j])
                 
         return Distances
 

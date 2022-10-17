@@ -114,7 +114,7 @@ if __name__ == '__main__':
     svm_results = pd.DataFrame(columns = 
                                 ['Data Set', 'Algorithm', 'Central Prototype', 
                                 'Data Dimension', 'Center Dimension', 'Fold', 
-                                'Module Number', 'BSR'])
+                                'Module Number', 'BSR', 'Size'])
 
     datasets = {}
     for f_name in os.listdir('./data/'):
@@ -169,7 +169,7 @@ if __name__ == '__main__':
                 for module in the_modules.iterrows():
                     mod_sig = 0
                     module_genes = module[1].item()
-
+                    module_size = len(list(module_genes))
                     slice_dataset = ds.slice_dataset(feature_ids=list(module_genes))
 
                     try:
@@ -180,7 +180,7 @@ if __name__ == '__main__':
                     row = pd.DataFrame(columns = list(svm_results.columns),
                                         data = [[dataset_name, algorithm, central_prototype,
                                                  data_dimension, center_dimension, fold,
-                                                 module_number, bsr]])
+                                                 module_number, bsr, module_size]])
                     svm_results = svm_results.append(row, ignore_index = True)
                     module_number +=1
 
@@ -222,6 +222,8 @@ if __name__ == '__main__':
                 mod_sig = 0
                 module_genes = module[1].item()   
 
+                module_size = len(list(module_genes))
+
                 slice_dataset = ds.slice_dataset(feature_ids=np.array(module_genes))
 
                 try:
@@ -230,9 +232,9 @@ if __name__ == '__main__':
                     bsr = np.nan   
                             
                 row = pd.DataFrame(columns = list(svm_results.columns),
-                                    data = [[dataset_name, algorithm, central_prototype,
-                                                data_dimension, center_dimension, fold,
-                                                module_number, bsr]])
+                                    data = [[dataset_name, algorithm, np.nan,
+                                                np.nan, np.nan, fold,
+                                                module_number, bsr, module_size]])
                 svm_results = svm_results.append(row, ignore_index = True)
                 print(svm_results)
                 module_number +=1
