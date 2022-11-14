@@ -75,7 +75,7 @@ def refined_modules(split_data: pd.DataFrame, module_path: str, center_methods: 
 
 if __name__ == '__main__':
 
-    center_methods = [['module_expression',1,1]]
+    center_methods = [['eigengene',1,1],['eigengene',2,1],['eigengene',4,1],['eigengene',8,1]]
     #center_methods = [['eigengene',1,1], 
     #                  ['flag_mean',1,1], 
     #                  ['flag_median',1,1], 

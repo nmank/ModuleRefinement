@@ -89,8 +89,8 @@ if __name__ == '__main__':
         module_type_dir = dir_path + module_type
 
         central_prototype = module_type[:-4]
-        data_dimension = module_type[-1]
-        center_dimension = module_type[-3]
+        data_dimension = int(module_type[-1])
+        center_dimension = int(module_type[-3])
 
         #for folds in os.listdir(module_type_dir): #all or 5fold
         for folds in ['5fold']: #5fold    
@@ -130,7 +130,7 @@ if __name__ == '__main__':
 
                     _,explained_variance_ratio = ca.eigengene(normalized_split_data, r= center_dimension, evr = True)
 
-                    row = pd.DataFrame(data = [[dataset_name, algorithm, central_prototype, center_dimension, fold,
+                    row = pd.DataFrame(data = [[dataset_name,  center_dimension, fold,
                                                  module_number, explained_variance_ratio, module_size]],
                                         columns = evr_results.columns)
                     evr_results = pd.concat([evr_results, row])

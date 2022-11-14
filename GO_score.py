@@ -56,37 +56,42 @@ if __name__ == '__main__':
             folder_path = f'{module_type_dir}/{folds}'
 
             for dataset_name in os.listdir(folder_path):
-                module_path = f'{folder_path}/{dataset_name}'
+                if 'ebola' not in dataset_name:
+                    module_path = f'{folder_path}/{dataset_name}'
 
-                if 'fold' in dataset_name:
-                    dataset_name = dataset_name[6:-7]
-                    fold = dataset_name[4]
-                else:
-                    dataset_name = dataset_name[:-7]
-                    fold = 'all'
+                    if 'fold' in dataset_name:
+                        fold = dataset_name[4]
+                        dataset_name = dataset_name[6:-7]
+                    else:
+                        dataset_name = dataset_name[:-7]
+                        fold = 'all'
                 
-                if 'gse' in dataset_name:
-                    organism = 'human'
-                else:
-                    organism = 'mouse'
+                    if 'gse' in dataset_name:
+                        organism = 'hsapiens'
+                    else:
+                        organism = 'mmusculus'
 
-                the_modules, all_features = utl.load_modules(module_path)
+                    the_modules, all_features = utl.load_modules(module_path)
 
-                module_number = 0
-                for module in the_modules.iterrows():
-                    mod_sig = 0
-                    module_genes = module[1].item()   
-
-                    mod_sig = module_significance(module_genes, organism)
+                    module_number = 0
+                    for module in the_modules.iterrows():
+                        mod_sig = 0
+                        module_genes = module[1].item()   
+                        
+                        try:
+                            mod_sig = module_significance(module_genes, organism)
                     
                     
-                    row = pd.DataFrame(columns = list(go_results.columns),
+                            row = pd.DataFrame(columns = list(go_results.columns),
                                         data = [[dataset_name, algorithm, central_prototype,
                                                  data_dimension, center_dimension, fold,
                                                  module_number, mod_sig]])
-                    go_results = go_results.append(row, ignore_index = True)
+                            go_results = pd.concat([go_results,row])
 
-                    module_number +=1
+                        except AssertionError:
+                            print('bad gateway error?')
+
+                        module_number +=1
 
 
     module_type_path = './modules/'
@@ -98,37 +103,41 @@ if __name__ == '__main__':
         folder_path = f'{module_type_dir}/{folds}'
 
         for dataset_name in os.listdir(folder_path):
-            module_path = f'{folder_path}/{dataset_name}'
+            if 'ebola' not in dataset_name:
+                module_path = f'{folder_path}/{dataset_name}'
 
-            if 'fold' in dataset_name:
-                dataset_name = dataset_name[6:-7]
-                fold = dataset_name[4]
-            else:
-                dataset_name = dataset_name[:-7]
-                fold = 'all'
+                if 'fold' in dataset_name:
+                    fold = dataset_name[4]
+                    dataset_name = dataset_name[6:-7]
+                else:
+                    dataset_name = dataset_name[:-7]
+                    fold = 'all'
             
-            if 'gse' in dataset_name:
-                organism = 'human'
-            else:
-                organism = 'mouse'
+                if 'gse' in dataset_name:
+                    organism = 'hsapiens'
+                else:
+                    organism = 'mmusculus'
 
-            the_modules, all_features = utl.load_modules(module_path)
+                the_modules, all_features = utl.load_modules(module_path)
 
-            module_number = 0
-            for module in the_modules.iterrows():
-                mod_sig = 0
-                module_genes = module[1].item()   
-
-                mod_sig = module_significance(module_genes, organism)
+                module_number = 0
+                for module in the_modules.iterrows():
+                    mod_sig = 0
+                    module_genes = module[1].item()   
+                    
+                    try:
+                        mod_sig = module_significance(module_genes, organism)
                 
                 
-                row = pd.DataFrame(columns = list(go_results.columns),
+                        row = pd.DataFrame(columns = list(go_results.columns),
                                     data = [[dataset_name, algorithm, '',
                                                 '', '', fold,
                                                 module_number, mod_sig]])
-                go_results = go_results.append(row, ignore_index = True)
+                        go_results = pd.concat([go_results,row])
+                    except AssertionError:
+                        print('bad gateway error?')
 
-                module_number +=1
+                    module_number +=1
 
 
-    go_results.to_csv(f'GO_score.csv')
+    go_results.to_csv('GO_score.csv')
