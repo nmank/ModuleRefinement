@@ -5,3 +5,4 @@
 ./old/*
 ./refined_modules/*
 *.pickle
+__pycache__*

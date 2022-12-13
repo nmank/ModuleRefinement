@@ -41,11 +41,15 @@ def generate_gse73072_dataset(dPath, tBin, study, out_dir):
     all_data = pd.DataFrame(data = data, columns = probe_ids, index = sample_ids)
     all_data.index.name = 'SampleID'
 
+    subjects = ccd.generate_labels('SubjectID', idx_list=idx)
+    subject_labels = pd.DataFrame(data = subjects, columns = ['subject'], index = sample_ids)
+    subject_labels.index.name = 'SampleID'
+
     labels = ccd.generate_labels('shedding', idx_list=idx)
     all_labels = pd.DataFrame(data = labels, columns = ['label'], index = sample_ids)
-    all_labels.index.name = 'SampleID' 
+    all_labels.index.name = 'SampleID'
 
-    
+    subject_labels.to_csv(f'{out_dir}gse73072_hrv_{tBin}_labels.csv')
     all_data.to_csv(f'{out_dir}gse73072_hrv_{tBin}.csv')
     all_labels.to_csv(f'{out_dir}gse73072_hrv_{tBin}_labels.csv')
 
