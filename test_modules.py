@@ -129,7 +129,7 @@ if __name__ == '__main__':
             datasets[data_name[7:]] = ds
 
 
-    dir_path = './refined_modules/'
+    dir_path = './refined_modules_backup/'
     algorithm = 'WGCNA_LBG'
 
     for module_type in os.listdir(dir_path): #center type
@@ -140,7 +140,7 @@ if __name__ == '__main__':
         data_dimension = module_type[-1]
         center_dimension = module_type[-3]
 
-        #for folds in os.listdir(module_type_dir): #all or 5fold
+        # for folds in os.listdir(module_type_dir): #all or 5fold
         for folds in ['5fold']: #5fold    
             folder_path = f'{module_type_dir}/{folds}'
 
@@ -159,37 +159,39 @@ if __name__ == '__main__':
                     organism = 'human'
                 else:
                     organism = 'mouse'
+
+                if ('True' not in dataset_name) and ('False' not in dataset_name):
                 
-                data_name = shorten_data_name(dataset_name)
-                ds = datasets[data_name]
+                    data_name = shorten_data_name(dataset_name)
+                    ds = datasets[data_name]
 
-                the_modules, all_features = utl.load_modules(module_path)
+                    the_modules, all_features = utl.load_modules(module_path)
 
-                module_number = 0
-                for module in the_modules.iterrows():
-                    mod_sig = 0
-                    module_genes = module[1].item()
-                    module_size = len(list(module_genes))
-                    slice_dataset = ds.slice_dataset(feature_ids=list(module_genes))
+                    module_number = 0
+                    for module in the_modules.iterrows():
+                        mod_sig = 0
+                        module_genes = module[1].item()
+                        module_size = len(list(module_genes))
+                        slice_dataset = ds.slice_dataset(feature_ids=list(module_genes))
 
-                    try:
-                        bsr = loso_test(slice_dataset, fold)
-                    except ValueError:
-                        bsr = np.nan   
-                             
-                    row = pd.DataFrame(columns = list(svm_results.columns),
-                                        data = [[dataset_name, algorithm, central_prototype,
-                                                 data_dimension, center_dimension, fold,
-                                                 module_number, bsr, module_size]])
-                    svm_results = svm_results.append(row, ignore_index = True)
-                    module_number +=1
+                        try:
+                            bsr = loso_test(slice_dataset, fold)
+                        except ValueError:
+                            bsr = np.nan   
+                                
+                        row = pd.DataFrame(columns = list(svm_results.columns),
+                                            data = [[dataset_name, algorithm, central_prototype,
+                                                    data_dimension, center_dimension, fold,
+                                                    module_number, bsr, module_size]])
+                        svm_results = svm_results.append(row, ignore_index = True)
+                        module_number +=1
 
 
     module_type_path = './modules/'
     algorithm = 'WGCNA'
     
 
-    #for folds in os.listdir(module_type_dir): #all or 5fold
+    # for folds in os.listdir(module_type_dir): #all or 5fold
     for folds in ['5fold']: #5fol   
         folder_path = f'{module_type_dir}/{folds}'
 
@@ -240,6 +242,6 @@ if __name__ == '__main__':
                 module_number +=1
 
 
-    svm_results.to_csv(f'svm_score.csv')
+    svm_results.to_csv(f'svm_score_new_labels.csv')
 
 
