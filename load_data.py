@@ -50,7 +50,7 @@ def generate_gse73072_dataset(dPath, tBin, study, out_dir):
     all_labels.index.name = 'SampleID'
 
     # subject_labels.to_csv(f'{out_dir}gse73072_hrv_{tBin}_subjects.csv')
-    # all_data.to_csv(f'{out_dir}gse73072_hrv_{tBin}.csv')
+    all_data.to_csv(f'{out_dir}gse73072_hrv_{tBin}.csv')
     all_labels.to_csv(f'{out_dir}gse73072_hrv_{tBin}_labels.csv')
 
 def generate_ebola_dataset(tissue, out_path):
@@ -97,8 +97,8 @@ if __name__ == '__main__':
     out_dir = '/data4/mankovic/ModuleRefinement/data/'
     generate_gse73072_dataset(dPath, tBin, study, out_dir)
 
-    # generate_ebola_dataset('Liver', out_dir)
-    # generate_ebola_dataset('Spleen', out_dir)
+    generate_ebola_dataset('Liver', out_dir)
+    generate_ebola_dataset('Spleen', out_dir)
 
-    # generate_salmonella_dataset('Liver', out_dir)
-    # generate_salmonella_dataset('Spleen', out_dir)
+    generate_salmonella_dataset('Liver', out_dir)
+    generate_salmonella_dataset('Spleen', out_dir)

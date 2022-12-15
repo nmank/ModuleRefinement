@@ -1,0 +1,3496 @@
+------------------------
+computing gse73072_hrv_48_64 modules
+[92mSaving data to be True, checking requirements ...[0m
+[1m[94mPre-processing...[0m
+	Detecting genes and samples with too many missing values...
+	Done pre-processing..
+
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.006317 -0.278556  ...  2366.867272  2311.974966  4474.254962
+1       2  0.195475 -0.927454  ...   780.720796   739.271367  1966.801921
+2       3  0.689478 -1.376244  ...   328.830901   286.106183  1227.578303
+3       4  0.842166 -1.653849  ...   162.677615    123.87484   888.204446
+4       5  0.891843 -1.754607  ...    90.287535     57.58006   683.861815
+5       6  0.896324 -1.792458  ...    54.592732    28.432658   545.250913
+6       7  0.859179 -1.832789  ...    35.244145    14.769803   445.734478
+7       8  0.867657 -1.794472  ...     23.94515     8.041531   371.279362
+8       9  0.869215 -1.759023  ...    16.940941     4.499335   313.807235
+9      10  0.867169 -1.727896  ...    12.383081     2.591135   268.347037
+10     11  0.859142 -1.714329  ...      9.29626     1.519792   231.676416
+11     13  0.871557 -1.654919  ...     5.579113     0.565023   176.646795
+12     15  0.883382  -1.61294  ...     3.569082     0.222962   137.871988
+13     17  0.871936  -1.61086  ...     2.394792     0.091043   109.535114
+14     19  0.880091  -1.58997  ...     1.667555      0.03885    88.247068
+
+[15 rows x 7 columns]
+[92mNo power detected to have scale free network!
+Found the best given power which is 6.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.998  ===>  99% of the (truncated) height range in dendro.
+	Done..
+
+[96mCalculating 49 module eigengenes in given set...[0m
+	Done..
+
+mergeCloseModules: Merging modules whose distance is less than 0.2
+fixDataStructure: data is not a Dictionary: converting it into one.
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 49 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 40 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 39 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 38 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 37 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 36 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 35 module eigengenes in given set...[0m
+	Done..
+
+  Calculating new MEs...
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 35 module eigengenes in given set...[0m
+	Done..
+
+[96mCalculating 35 module eigengenes in given set...[0m
+	Done..
+
+fixDataStructure: data is not a Dictionary: converting it into one.
+orderMEs: order not given, calculating using given set 0
+	Done running WGCNA..
+
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.006317 -0.278556  ...  2366.867272  2311.974966  4474.254962
+1       2  0.195475 -0.927454  ...   780.720796   739.271367  1966.801921
+2       3  0.689478 -1.376244  ...   328.830901   286.106183  1227.578303
+3       4  0.842166 -1.653849  ...   162.677615    123.87484   888.204446
+4       5  0.891843 -1.754607  ...    90.287535     57.58006   683.861815
+5       6  0.896324 -1.792458  ...    54.592732    28.432658   545.250913
+6       7  0.859179 -1.832789  ...    35.244145    14.769803   445.734478
+7       8  0.867657 -1.794472  ...     23.94515     8.041531   371.279362
+8       9  0.869215 -1.759023  ...    16.940941     4.499335   313.807235
+9      10  0.867169 -1.727896  ...    12.383081     2.591135   268.347037
+10     11  0.859142 -1.714329  ...      9.29626     1.519792   231.676416
+11     13  0.871557 -1.654919  ...     5.579113     0.565023   176.646795
+12     15  0.883382  -1.61294  ...     3.569082     0.222962   137.871988
+13     17  0.871936  -1.61086  ...     2.394792     0.091043   109.535114
+14     19  0.880091  -1.58997  ...     1.667555      0.03885    88.247068
+
+[15 rows x 7 columns]
+[92mNo power detected to have scale free network!
+Found the best given power which is 6.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.998  ===>  99% of the (truncated) height range in dendro.
+	Done..
+
+[96mCalculating 49 module eigengenes in given set...[0m
+	Done..
+
+mergeCloseModules: Merging modules whose distance is less than 0.2
+fixDataStructure: data is not a Dictionary: converting it into one.
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 49 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 40 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 39 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 38 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 37 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 36 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 35 module eigengenes in given set...[0m
+	Done..
+
+  Calculating new MEs...
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 35 module eigengenes in given set...[0m
+	Done..
+
+[96mCalculating 35 module eigengenes in given set...[0m
+	Done..
+
+fixDataStructure: data is not a Dictionary: converting it into one.
+orderMEs: order not given, calculating using given set 0
+	Done running WGCNA..
+
+[92mSaving data to be True, checking requirements ...[0m
+[1m[94mPre-processing...[0m
+	Detecting genes and samples with too many missing values...
+	Done pre-processing..
+
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.005386 -0.236349  ...  2653.509932  2614.476074  4929.451487
+1       2  0.239733 -1.284359  ...   953.045548   904.607079  2448.976063
+2       3    0.5886 -1.225902  ...   428.244821   376.345326  1441.431069
+3       4  0.785052 -1.519503  ...   222.350468   172.319498  1040.539223
+4       5  0.843965 -1.660809  ...   127.905326    84.313952    799.41732
+5       6  0.845784 -1.751633  ...    79.420992    43.517542   639.848092
+6       7  0.867465 -1.752326  ...    52.305549    23.342883   524.999473
+7       8  0.867607 -1.755262  ...    36.083423    13.118058   438.928074
+8       9  0.860771 -1.749403  ...    25.836806     7.608504    372.40784
+9      10  0.854301 -1.745925  ...    19.070155     4.509804   319.738558
+10     11  0.852115  -1.72932  ...    14.433438     2.774204   277.213694
+11     13   0.83018  -1.72014  ...     8.777828     1.105188   213.304992
+12     15  0.846727 -1.676663  ...      5.67685     0.473231   168.155306
+13     17  0.853097 -1.658026  ...     3.845538     0.209555   135.039061
+14     19  0.867903 -1.627841  ...     2.700921     0.096001   110.040903
+
+[15 rows x 7 columns]
+[92mNo power detected to have scale free network!
+Found the best given power which is 19.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.999  ===>  99% of the (truncated) height range in dendro.
+	Done..
+
+[96mCalculating 22 module eigengenes in given set...[0m
+	Done..
+
+mergeCloseModules: Merging modules whose distance is less than 0.2
+fixDataStructure: data is not a Dictionary: converting it into one.
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 22 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 17 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 13 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 11 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 10 module eigengenes in given set...[0m
+	Done..
+
+  Calculating new MEs...
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 10 module eigengenes in given set...[0m
+	Done..
+
+[96mCalculating 10 module eigengenes in given set...[0m
+	Done..
+
+fixDataStructure: data is not a Dictionary: converting it into one.
+orderMEs: order not given, calculating using given set 0
+	Done running WGCNA..
+
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.005386 -0.236349  ...  2653.509932  2614.476074  4929.451487
+1       2  0.239733 -1.284359  ...   953.045548   904.607079  2448.976063
+2       3    0.5886 -1.225902  ...   428.244821   376.345326  1441.431069
+3       4  0.785052 -1.519503  ...   222.350468   172.319498  1040.539223
+4       5  0.843965 -1.660809  ...   127.905326    84.313952    799.41732
+5       6  0.845784 -1.751633  ...    79.420992    43.517542   639.848092
+6       7  0.867465 -1.752326  ...    52.305549    23.342883   524.999473
+7       8  0.867607 -1.755262  ...    36.083423    13.118058   438.928074
+8       9  0.860771 -1.749403  ...    25.836806     7.608504    372.40784
+9      10  0.854301 -1.745925  ...    19.070155     4.509804   319.738558
+10     11  0.852115  -1.72932  ...    14.433438     2.774204   277.213694
+11     13   0.83018  -1.72014  ...     8.777828     1.105188   213.304992
+12     15  0.846727 -1.676663  ...      5.67685     0.473231   168.155306
+13     17  0.853097 -1.658026  ...     3.845538     0.209555   135.039061
+14     19  0.867903 -1.627841  ...     2.700921     0.096001   110.040903
+
+[15 rows x 7 columns]
+[92mNo power detected to have scale free network!
+Found the best given power which is 19.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.999  ===>  99% of the (truncated) height range in dendro.
+	Done..
+
+[96mCalculating 22 module eigengenes in given set...[0m
+	Done..
+
+mergeCloseModules: Merging modules whose distance is less than 0.2
+fixDataStructure: data is not a Dictionary: converting it into one.
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 22 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 17 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 13 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 11 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 10 module eigengenes in given set...[0m
+	Done..
+
+  Calculating new MEs...
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 10 module eigengenes in given set...[0m
+	Done..
+
+[96mCalculating 10 module eigengenes in given set...[0m
+	Done..
+
+fixDataStructure: data is not a Dictionary: converting it into one.
+orderMEs: order not given, calculating using given set 0
+	Done running WGCNA..
+
+[92mSaving data to be True, checking requirements ...[0m
+[1m[94mPre-processing...[0m
+	Detecting genes and samples with too many missing values...
+	Done pre-processing..
+
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...     mean(k)    median(k)       max(k)
+0       1  0.044212 -0.797742  ...  2506.86973  2513.898612  4376.293364
+1       2  0.053768 -0.331506  ...  864.201586   837.639897  1817.712815
+2       3   0.67058 -1.366122  ...  375.807673   331.016088  1262.883508
+3       4  0.865017 -1.694588  ...  190.540873   146.586967   960.114529
+4       5  0.918736 -1.773187  ...  107.917285    69.765398   762.657703
+5       6  0.931007 -1.781563  ...   66.423189    35.349612   623.713334
+6       7  0.937878 -1.743247  ...   43.585532    18.817931   520.828259
+7       8  0.937081 -1.700431  ...   30.069294    10.405288   441.803603
+8       9  0.933896 -1.669219  ...   21.587411     5.953277   379.409405
+9      10  0.941688 -1.627392  ...   16.004101     3.523659   329.075469
+10     11  0.916721 -1.620792  ...   12.180948     2.122994   287.765341
+11     13  0.923728 -1.569019  ...    7.507532      0.82617   224.419659
+12     15  0.925654 -1.523507  ...    4.928037     0.344724   178.650082
+13     17  0.923722 -1.492019  ...    3.390701      0.14991   144.491908
+14     19  0.931371 -1.463166  ...    2.419714     0.068515    118.36111
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 6.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+	Done..
+
+[96mCalculating 57 module eigengenes in given set...[0m
+	Done..
+
+mergeCloseModules: Merging modules whose distance is less than 0.2
+fixDataStructure: data is not a Dictionary: converting it into one.
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 57 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 51 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 46 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 44 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 39 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 38 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 37 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 36 module eigengenes in given set...[0m
+	Done..
+
+  Calculating new MEs...
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 36 module eigengenes in given set...[0m
+	Done..
+
+[96mCalculating 36 module eigengenes in given set...[0m
+	Done..
+
+fixDataStructure: data is not a Dictionary: converting it into one.
+orderMEs: order not given, calculating using given set 0
+	Done running WGCNA..
+
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...     mean(k)    median(k)       max(k)
+0       1  0.044212 -0.797742  ...  2506.86973  2513.898612  4376.293364
+1       2  0.053768 -0.331506  ...  864.201586   837.639897  1817.712815
+2       3   0.67058 -1.366122  ...  375.807673   331.016088  1262.883508
+3       4  0.865017 -1.694588  ...  190.540873   146.586967   960.114529
+4       5  0.918736 -1.773187  ...  107.917285    69.765398   762.657703
+5       6  0.931007 -1.781563  ...   66.423189    35.349612   623.713334
+6       7  0.937878 -1.743247  ...   43.585532    18.817931   520.828259
+7       8  0.937081 -1.700431  ...   30.069294    10.405288   441.803603
+8       9  0.933896 -1.669219  ...   21.587411     5.953277   379.409405
+9      10  0.941688 -1.627392  ...   16.004101     3.523659   329.075469
+10     11  0.916721 -1.620792  ...   12.180948     2.122994   287.765341
+11     13  0.923728 -1.569019  ...    7.507532      0.82617   224.419659
+12     15  0.925654 -1.523507  ...    4.928037     0.344724   178.650082
+13     17  0.923722 -1.492019  ...    3.390701      0.14991   144.491908
+14     19  0.931371 -1.463166  ...    2.419714     0.068515    118.36111
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 6.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+	Done..
+
+[96mCalculating 57 module eigengenes in given set...[0m
+	Done..
+
+mergeCloseModules: Merging modules whose distance is less than 0.2
+fixDataStructure: data is not a Dictionary: converting it into one.
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 57 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 51 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 46 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 44 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 39 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 38 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 37 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 36 module eigengenes in given set...[0m
+	Done..
+
+  Calculating new MEs...
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 36 module eigengenes in given set...[0m
+	Done..
+
+[96mCalculating 36 module eigengenes in given set...[0m
+	Done..
+
+fixDataStructure: data is not a Dictionary: converting it into one.
+orderMEs: order not given, calculating using given set 0
+	Done running WGCNA..
+
+computing 5 fold modules...
+[92mSaving data to be True, checking requirements ...[0m
+[1m[94mPre-processing...[0m
+	Detecting genes and samples with too many missing values...
+	Done pre-processing..
+
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)   median(k)       max(k)
+0       1  0.006443 -0.285512  ...  2445.685541   2411.8625   4483.00626
+1       2  0.128916 -0.617863  ...   823.020588  783.622188  1969.196348
+2       3  0.640192 -1.414819  ...   351.038939  307.207112  1279.248853
+3       4  0.843902 -1.624094  ...   175.014032  134.978856   902.443846
+4       5  0.893853 -1.745132  ...    97.584226   64.184858   692.487911
+5       6  0.913648 -1.771314  ...    59.158656   32.078092   550.489836
+6       7  0.905095 -1.778562  ...    38.240857   16.813732   448.656479
+7       8   0.90008 -1.763059  ...    25.991383    9.264728   372.589738
+8       9  0.885517 -1.748693  ...    18.384662    5.214924   313.985307
+9      10  0.875901 -1.729094  ...    13.429781    3.045213   267.726516
+10     11  0.885195 -1.695027  ...    10.072616    1.805619   230.494106
+11     13  0.881289 -1.656521  ...     6.030467    0.684989   174.806359
+12     15  0.895184 -1.610494  ...     3.847152    0.275692   135.748094
+13     17  0.905697 -1.585955  ...     2.574006    0.114889   107.333058
+14     19  0.903473 -1.577258  ...     1.787344    0.050019    86.080045
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 6.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.998  ===>  99% of the (truncated) height range in dendro.
+	Done..
+
+[96mCalculating 51 module eigengenes in given set...[0m
+	Done..
+
+mergeCloseModules: Merging modules whose distance is less than 0.2
+fixDataStructure: data is not a Dictionary: converting it into one.
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 51 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 47 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 43 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 40 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 39 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 38 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 37 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 36 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 35 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 34 module eigengenes in given set...[0m
+	Done..
+
+  Calculating new MEs...
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 34 module eigengenes in given set...[0m
+	Done..
+
+[96mCalculating 34 module eigengenes in given set...[0m
+	Done..
+
+fixDataStructure: data is not a Dictionary: converting it into one.
+orderMEs: order not given, calculating using given set 0
+	Done running WGCNA..
+
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)   median(k)       max(k)
+0       1  0.006443 -0.285512  ...  2445.685541   2411.8625   4483.00626
+1       2  0.128916 -0.617863  ...   823.020588  783.622188  1969.196348
+2       3  0.640192 -1.414819  ...   351.038939  307.207112  1279.248853
+3       4  0.843902 -1.624094  ...   175.014032  134.978856   902.443846
+4       5  0.893853 -1.745132  ...    97.584226   64.184858   692.487911
+5       6  0.913648 -1.771314  ...    59.158656   32.078092   550.489836
+6       7  0.905095 -1.778562  ...    38.240857   16.813732   448.656479
+7       8   0.90008 -1.763059  ...    25.991383    9.264728   372.589738
+8       9  0.885517 -1.748693  ...    18.384662    5.214924   313.985307
+9      10  0.875901 -1.729094  ...    13.429781    3.045213   267.726516
+10     11  0.885195 -1.695027  ...    10.072616    1.805619   230.494106
+11     13  0.881289 -1.656521  ...     6.030467    0.684989   174.806359
+12     15  0.895184 -1.610494  ...     3.847152    0.275692   135.748094
+13     17  0.905697 -1.585955  ...     2.574006    0.114889   107.333058
+14     19  0.903473 -1.577258  ...     1.787344    0.050019    86.080045
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 6.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.998  ===>  99% of the (truncated) height range in dendro.
+	Done..
+
+[96mCalculating 51 module eigengenes in given set...[0m
+	Done..
+
+mergeCloseModules: Merging modules whose distance is less than 0.2
+fixDataStructure: data is not a Dictionary: converting it into one.
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 51 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 47 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 43 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 40 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 39 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 38 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 37 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 36 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 35 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 34 module eigengenes in given set...[0m
+	Done..
+
+  Calculating new MEs...
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 34 module eigengenes in given set...[0m
+	Done..
+
+[96mCalculating 34 module eigengenes in given set...[0m
+	Done..
+
+fixDataStructure: data is not a Dictionary: converting it into one.
+orderMEs: order not given, calculating using given set 0
+	Done running WGCNA..
+
+[92mSaving data to be True, checking requirements ...[0m
+[1m[94mPre-processing...[0m
+	Detecting genes and samples with too many missing values...
+	Done pre-processing..
+
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000822 -0.091834  ...  2769.856601  2761.303172  4967.013247
+1       2  0.178318 -1.071213  ...  1022.110404   987.478785  2464.735703
+2       3   0.53337  -1.23698  ...   468.278191   418.200378  1529.230705
+3       4  0.749996 -1.531087  ...   246.693547   195.364358  1110.521864
+4       5  0.850882 -1.631038  ...   143.527382    98.024655   844.262909
+5       6  0.878022 -1.685407  ...    89.943897    51.557748   670.904544
+6       7  0.885597 -1.712164  ...    59.690657    28.093424   550.923133
+7       8   0.88078 -1.717959  ...    41.446292    15.913188    460.74449
+8       9  0.886085  -1.70275  ...    29.842856     9.306178    390.90917
+9      10  0.887487 -1.687265  ...    22.133901      5.61724   335.542086
+10     11  0.875489 -1.683271  ...    16.823229     3.477835   290.804465
+11     13  0.870394 -1.660114  ...    10.303013      1.41141   223.545325
+12     15  0.854711 -1.652873  ...     6.700115     0.611557   176.045003
+13     17  0.867298 -1.621082  ...     4.559012     0.281356   141.237839
+14     19  0.876958 -1.601201  ...       3.2139     0.134107   114.995924
+
+[15 rows x 7 columns]
+[92mNo power detected to have scale free network!
+Found the best given power which is 10.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.998  ===>  99% of the (truncated) height range in dendro.
+	Done..
+
+[96mCalculating 40 module eigengenes in given set...[0m
+	Done..
+
+mergeCloseModules: Merging modules whose distance is less than 0.2
+fixDataStructure: data is not a Dictionary: converting it into one.
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 40 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 30 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 26 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 24 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 23 module eigengenes in given set...[0m
+	Done..
+
+  Calculating new MEs...
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 23 module eigengenes in given set...[0m
+	Done..
+
+[96mCalculating 23 module eigengenes in given set...[0m
+	Done..
+
+fixDataStructure: data is not a Dictionary: converting it into one.
+orderMEs: order not given, calculating using given set 0
+	Done running WGCNA..
+
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000822 -0.091834  ...  2769.856601  2761.303172  4967.013247
+1       2  0.178318 -1.071213  ...  1022.110404   987.478785  2464.735703
+2       3   0.53337  -1.23698  ...   468.278191   418.200378  1529.230705
+3       4  0.749996 -1.531087  ...   246.693547   195.364358  1110.521864
+4       5  0.850882 -1.631038  ...   143.527382    98.024655   844.262909
+5       6  0.878022 -1.685407  ...    89.943897    51.557748   670.904544
+6       7  0.885597 -1.712164  ...    59.690657    28.093424   550.923133
+7       8   0.88078 -1.717959  ...    41.446292    15.913188    460.74449
+8       9  0.886085  -1.70275  ...    29.842856     9.306178    390.90917
+9      10  0.887487 -1.687265  ...    22.133901      5.61724   335.542086
+10     11  0.875489 -1.683271  ...    16.823229     3.477835   290.804465
+11     13  0.870394 -1.660114  ...    10.303013      1.41141   223.545325
+12     15  0.854711 -1.652873  ...     6.700115     0.611557   176.045003
+13     17  0.867298 -1.621082  ...     4.559012     0.281356   141.237839
+14     19  0.876958 -1.601201  ...       3.2139     0.134107   114.995924
+
+[15 rows x 7 columns]
+[92mNo power detected to have scale free network!
+Found the best given power which is 10.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.998  ===>  99% of the (truncated) height range in dendro.
+	Done..
+
+[96mCalculating 40 module eigengenes in given set...[0m
+	Done..
+
+mergeCloseModules: Merging modules whose distance is less than 0.2
+fixDataStructure: data is not a Dictionary: converting it into one.
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 40 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 30 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 26 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 24 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 23 module eigengenes in given set...[0m
+	Done..
+
+  Calculating new MEs...
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 23 module eigengenes in given set...[0m
+	Done..
+
+[96mCalculating 23 module eigengenes in given set...[0m
+	Done..
+
+fixDataStructure: data is not a Dictionary: converting it into one.
+orderMEs: order not given, calculating using given set 0
+	Done running WGCNA..
+
+[92mSaving data to be True, checking requirements ...[0m
+[1m[94mPre-processing...[0m
+	Detecting genes and samples with too many missing values...
+	Done pre-processing..
+
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...     mean(k)    median(k)       max(k)
+0       1  0.015901 -0.494488  ...  2602.76263  2613.326173  4434.273985
+1       2  0.054371 -0.421158  ...  925.570579   906.480393  1920.187648
+2       3  0.595154 -1.296492  ...  410.900231   371.367251  1273.917683
+3       4  0.831838 -1.640919  ...  210.797473   169.463814   947.654107
+4       5     0.912 -1.764933  ...   119.97331    84.037603   748.938558
+5       6  0.942524 -1.790473  ...   73.844561    44.119497   609.961972
+6       7  0.950014 -1.773104  ...   48.303543    24.270583   507.552066
+7       8   0.94446 -1.753484  ...   33.158428    13.881852   429.216425
+8       9  0.939712 -1.725693  ...   23.664377     8.235507   367.592472
+9      10  0.933684 -1.699111  ...   17.433985     5.007664   318.045706
+10     11   0.93142  -1.67264  ...   13.186295     3.109574   277.507224
+11     13  0.914507 -1.637522  ...    8.032093      1.28378   215.600929
+12     15   0.91556 -1.588056  ...    5.218414     0.569096   171.100453
+13     17  0.925669  -1.54339  ...    3.559114     0.264769   138.040149
+14     19  0.932019  -1.51189  ...    2.521049     0.128176   112.850694
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 6.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+	Done..
+
+[96mCalculating 63 module eigengenes in given set...[0m
+	Done..
+
+mergeCloseModules: Merging modules whose distance is less than 0.2
+fixDataStructure: data is not a Dictionary: converting it into one.
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 63 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 52 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 47 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 42 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 39 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 37 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 36 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 35 module eigengenes in given set...[0m
+	Done..
+
+  Calculating new MEs...
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 35 module eigengenes in given set...[0m
+	Done..
+
+[96mCalculating 35 module eigengenes in given set...[0m
+	Done..
+
+fixDataStructure: data is not a Dictionary: converting it into one.
+orderMEs: order not given, calculating using given set 0
+	Done running WGCNA..
+
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...     mean(k)    median(k)       max(k)
+0       1  0.015901 -0.494488  ...  2602.76263  2613.326173  4434.273985
+1       2  0.054371 -0.421158  ...  925.570579   906.480393  1920.187648
+2       3  0.595154 -1.296492  ...  410.900231   371.367251  1273.917683
+3       4  0.831838 -1.640919  ...  210.797473   169.463814   947.654107
+4       5     0.912 -1.764933  ...   119.97331    84.037603   748.938558
+5       6  0.942524 -1.790473  ...   73.844561    44.119497   609.961972
+6       7  0.950014 -1.773104  ...   48.303543    24.270583   507.552066
+7       8   0.94446 -1.753484  ...   33.158428    13.881852   429.216425
+8       9  0.939712 -1.725693  ...   23.664377     8.235507   367.592472
+9      10  0.933684 -1.699111  ...   17.433985     5.007664   318.045706
+10     11   0.93142  -1.67264  ...   13.186295     3.109574   277.507224
+11     13  0.914507 -1.637522  ...    8.032093      1.28378   215.600929
+12     15   0.91556 -1.588056  ...    5.218414     0.569096   171.100453
+13     17  0.925669  -1.54339  ...    3.559114     0.264769   138.040149
+14     19  0.932019  -1.51189  ...    2.521049     0.128176   112.850694
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 6.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+	Done..
+
+[96mCalculating 63 module eigengenes in given set...[0m
+	Done..
+
+mergeCloseModules: Merging modules whose distance is less than 0.2
+fixDataStructure: data is not a Dictionary: converting it into one.
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 63 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 52 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 47 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 42 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 39 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 37 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 36 module eigengenes in given set...[0m
+	Done..
+
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 35 module eigengenes in given set...[0m
+	Done..
+
+  Calculating new MEs...
+multiSetMEs: Calculating module MEs.
+  Working on set 1 ...
+[96mCalculating 35 module eigengenes in given set...[0m
+	Done..
+
+[96mCalculating 35 module eigengenes in given set...[0m
+	Done..
+
+fixDataStructure: data is not a Dictionary: converting it into one.
+orderMEs: order not given, calculating using given set 0
+	Done running WGCNA..
+
+[92mSaving data to be True, checking requirements ...[0m
+[1m[94mPre-processing...[0m
+	Detecting genes and samples with too many missing values...
+	Done pre-processing..
+
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mNo power detected to have scale free network!
+Found the best given power which is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to 0.8
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to 0.7000000000000001
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to 0.6000000000000001
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to 0.5000000000000001
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to 0.40000000000000013
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to 0.30000000000000016
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to 0.20000000000000015
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to 0.10000000000000014
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to 1.3877787807814457e-16
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -0.09999999999999987
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -0.19999999999999987
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -0.2999999999999999
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -0.3999999999999999
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -0.4999999999999999
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -0.5999999999999999
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -0.6999999999999998
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -0.7999999999999998
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -0.8999999999999998
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -0.9999999999999998
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -1.0999999999999999
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -1.2
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -1.3
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -1.4000000000000001
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -1.5000000000000002
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -1.6000000000000003
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -1.7000000000000004
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -1.8000000000000005
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -1.9000000000000006
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -2.0000000000000004
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -2.1000000000000005
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -2.2000000000000006
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -2.3000000000000007
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -2.400000000000001
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -2.500000000000001
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -2.600000000000001
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -2.700000000000001
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -2.800000000000001
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -2.9000000000000012
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -3.0000000000000013
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -3.1000000000000014
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -3.2000000000000015
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -3.3000000000000016
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -3.4000000000000017
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -3.5000000000000018
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -3.600000000000002
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -3.700000000000002
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -3.800000000000002
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -3.900000000000002
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -4.000000000000002
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -4.100000000000001
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -4.200000000000001
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -4.300000000000001
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -4.4
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -4.5
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -4.6
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -4.699999999999999
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -4.799999999999999
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -4.899999999999999
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -4.999999999999998
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -5.099999999999998
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -5.1999999999999975
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -5.299999999999997
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -5.399999999999997
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -5.4999999999999964
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -5.599999999999996
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -5.699999999999996
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -5.799999999999995
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -5.899999999999995
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -5.999999999999995
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -6.099999999999994
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -6.199999999999994
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -6.299999999999994
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -6.399999999999993
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -6.499999999999993
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -6.5999999999999925
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -6.699999999999992
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -6.799999999999992
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
+    Power  SFT.R.sq     slope  ...      mean(k)    median(k)       max(k)
+0       1  0.000717  0.083281  ...  2395.660177  2326.358121   4478.33546
+1       2  0.230624 -1.073387  ...   799.464707   751.009176  2045.991659
+2       3  0.669419 -1.333986  ...   338.797783   294.291136  1225.028035
+3       4  0.840067 -1.637695  ...   167.862386   128.651189   890.872546
+4       5  0.894902 -1.751283  ...    93.023464    61.022602    686.47032
+5       6  0.888478  -1.81638  ...    56.074107     30.44425    547.79243
+6       7  0.878566 -1.826216  ...    36.072173    16.078637   448.189274
+7       8  0.871586 -1.807699  ...    24.425785     8.820214   373.626013
+8       9  0.872657 -1.768813  ...    17.232766     4.947423   316.028992
+9      10  0.870281 -1.733284  ...    12.569925     2.858343   270.433669
+10     11    0.8786 -1.690572  ...     9.423276     1.684056   233.623749
+11     13  0.887084 -1.631384  ...     5.649765     0.641108   178.320808
+12     15  0.891854 -1.591548  ...     3.617277      0.25808    139.29693
+13     17  0.884062 -1.580866  ...     2.431905     0.109162   110.743584
+14     19  0.891748 -1.556315  ...       1.6978     0.047605    89.272093
+
+[15 rows x 7 columns]
+[92mSelected power to have scale free network is 5.[0m
+[96mcalculating adjacency matrix ...[0m
+	Done..
+
+[96mcalculating TOM similarity matrix ...[0m
+	Done..
+
+[96mGoing through the merge tree...[0m
+..cutHeight not given, setting it to 0.997  ===>  99% of the (truncated) height range in dendro.
+setting RsquaredCut to -6.8999999999999915
+[1m[94mRun WGCNA...[0m
+[96mpickSoftThreshold: calculating connectivity for given powers...[0m
+will use block size  2008
