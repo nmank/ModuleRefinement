@@ -140,4 +140,4 @@ if __name__ == '__main__':
                     module_number +=1
 
 
-    go_results.to_csv('GO_score.csv')
+    go_results.to_csv('GO_score_sanity.csv')

@@ -6,3 +6,4 @@
 ./refined_modules/*
 *.pickle
 __pycache__*
+./trash*

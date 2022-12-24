@@ -42,10 +42,10 @@ from sklearn.model_selection import StratifiedKFold
 
 def shorten_data_name(data_name):
     if 'gse' in data_name:
-        if 'True' in data_name:
-            data_name = data_name[:-5]
-        if 'False' in data_name:
-            data_name = data_name[:-6]
+        if 'control' in data_name:
+            data_name = data_name[:-8]
+        if 'shedder48_64' in data_name:
+            data_name = data_name[:-13]
     if 'salmonella' in data_name:
         if 'tolerant' in data_name:
             data_name = data_name[:-9]

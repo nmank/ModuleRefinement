@@ -75,28 +75,28 @@ def refined_modules(split_data: pd.DataFrame, module_path: str, center_methods: 
 
 if __name__ == '__main__':
 
-    center_methods = [['eigengene',1,1],['eigengene',2,1],['eigengene',4,1],['eigengene',8,1]]
-    #center_methods = [['eigengene',1,1], 
-    #                  ['flag_mean',1,1], 
-    #                  ['flag_median',1,1], 
-    #                  ['module_expression',1,1],
-    #                  ['eigengene',2,1], 
-    #                  ['flag_mean',2,1], 
-    #                  ['flag_median',2,1],
-    #                  ['eigengene',4,1], 
-    #                  ['flag_mean',4,1], 
-    #                  ['flag_median',4,1],
-    #                  ['eigengene',8,1], 
-    #                  ['flag_mean',8,1], 
-    #                  ['flag_median',8,1],
-    #                  ['flag_mean',1,2], 
-    #                  ['flag_median',1,2],
-    #                  ['flag_mean',2,2], 
-    #                  ['flag_median',2,2],
-    #                  ['flag_mean',4,2], 
-    #                  ['flag_median',4,2],
-    #                  ['flag_mean',8,2], 
-    #                  ['flag_median',8,2]]
+    #center_methods = [['eigengene',1,1],['eigengene',2,1],['eigengene',4,1],['eigengene',8,1]]
+    center_methods = [['eigengene',1,1], 
+                      ['flag_mean',1,1], 
+                      ['flag_median',1,1], 
+                      ['module_expression',1,1],
+                      ['eigengene',2,1], 
+                      ['flag_mean',2,1], 
+                      ['flag_median',2,1],
+                      ['eigengene',4,1], 
+                      ['flag_mean',4,1], 
+                      ['flag_median',4,1],
+                      ['eigengene',8,1], 
+                      ['flag_mean',8,1], 
+                      ['flag_median',8,1],
+                      ['flag_mean',1,2], 
+                      ['flag_median',1,2],
+                      ['flag_mean',2,2], 
+                      ['flag_median',2,2],
+                      ['flag_mean',4,2], 
+                      ['flag_median',4,2],
+                      ['flag_mean',8,2], 
+                      ['flag_median',8,2]]
 
     prms = {}
 
@@ -114,7 +114,7 @@ if __name__ == '__main__':
                 species = 'mouse'
 
 
-            foo = True
+            foo = 'gse' in file_name
             if foo:
                 class_data, unique_labels, data_all, labels_all = utl.load_data(data_dir +file_name)
 

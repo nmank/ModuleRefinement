@@ -5,4 +5,4 @@
 #SBATCH --nodes=1
 conda activate env1
 module load python
-eigengene_explained_variance.py
+python eigengene_explained_variance.py

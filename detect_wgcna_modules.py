@@ -73,25 +73,25 @@ if __name__ == '__main__':
 
                 class_data, unique_labels, data_all, labels_all = utl.load_data(data_dir +file_name)
 
-                out_file = f'./modules/all/{file_name[:-4]}.pickle'
-                prms[file_name[:-4]] = wgcna_modules(data_all, species, out_file)
+                #out_file = f'./modules/all/{file_name[:-4]}.pickle'
+                #prms[file_name[:-4]] = wgcna_modules(data_all, species, out_file)
 
-                for dta, lbl in zip(class_data, unique_labels):
-                    out_file = f'./modules/all/{file_name[:-4]}_{lbl}.pickle'
-                    prms[file_name[:-4]+'_'+str(lbl)] = wgcna_modules(dta, species, out_file)
+                #for dta, lbl in zip(class_data, unique_labels):
+                #    out_file = f'./modules/all/{file_name[:-4]}_{lbl}.pickle'
+                #    prms[file_name[:-4]+'_'+str(lbl)] = wgcna_modules(dta, species, out_file)
 
                 print(f'computing 5 fold modules...')
 
                 skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=0)
                 skf.get_n_splits(data_all, labels_all)
 
-                fold_number = 0
+                fold_number = 0 #was 3
                 for train_index, test_index in skf.split(data_all, labels_all):
                     split_data = data_all.iloc[train_index]
                     split_labels = labels_all.iloc[train_index]
 
-                    out_file = f'./modules/5fold/fold{fold_number}_{file_name[:-4]}.pickle'
-                    prms[str(fold_number) + '_' + file_name[:-4]] = wgcna_modules(split_data, species, out_file)
+                    #out_file = f'./modules/5fold/fold{fold_number}_{file_name[:-4]}.pickle'
+                    #prms[str(fold_number) + '_' + file_name[:-4]] = wgcna_modules(split_data, species, out_file)
 
                     class_data, unique_labels = utl.separate_classes(split_data, split_labels)
 

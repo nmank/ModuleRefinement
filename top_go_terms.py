@@ -44,11 +44,11 @@ if __name__ == '__main__':
 
 
 
-    central_prototype = 'flag_median'
+    central_prototype = 'module_expression'
     data_dimension = 1
     center_dimension = 1
     fold = 'all'
-    dataset_name = 'gse73072_hrv_48_64'
+    dataset_name = 'gse73072_hrv_48_64_shedder48_64'
 
     organism = 'hsapiens'
     #organism = 'mmusculus'
@@ -57,6 +57,7 @@ if __name__ == '__main__':
 
     the_modules, all_features = utl.load_modules(module_path)
 
+    best_feats = pd.DataFrame()
     #module_number = 2
     for i in range(len(the_modules)):
         module_genes = the_modules.iloc[i].item() 
@@ -67,10 +68,13 @@ if __name__ == '__main__':
         if np.sum([('virus' in n) or ('immun' in n) for n in top_entries['name']])>0:
             print(f'module {i}')
             print(f'n genes {len(module_genes)}')
+            column = pd.DataFrame(columns = [f'module {i}'], data = module_genes)
+            best_feats = pd.concat([best_feats, column], axis=1)
+    best_feats.to_csv(f'{dataset_name}_{central_prototype}_{center_dimension}_{data_dimension}.csv')
 
     print('------------------------------------------------------')
 
-    central_prototype = 'flag_median'
+    central_prototype = 'module_expression'
     data_dimension = 1
     center_dimension = 1
     fold = 'all'
@@ -83,6 +87,7 @@ if __name__ == '__main__':
     the_modules, all_features = utl.load_modules(module_path)
 
     #module_number = 2
+    best_feats = pd.DataFrame()
     for i in range(len(the_modules)):
         module_genes = the_modules.iloc[i].item()
 
@@ -92,3 +97,6 @@ if __name__ == '__main__':
         if np.sum(['immun' in n for n in top_entries['name']])>0:
             print(f'module {i}')
             print(f'n genes {len(module_genes)}')
+            column = pd.DataFrame(columns = [f'module {i}'], data = module_genes)
+            best_feats = pd.concat([best_feats, column], axis=1)
+    best_feats.to_csv(f'{dataset_name}_{central_prototype}_{center_dimension}_{data_dimension}.csv')

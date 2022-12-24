@@ -38,10 +38,10 @@ from sklearn.model_selection import StratifiedKFold
 
 def shorten_data_name(data_name):
     if 'gse' in data_name:
-        if 'True' in data_name:
-            data_name = data_name[:-5]
-        if 'False' in data_name:
-            data_name = data_name[:-6]
+        if 'control' in data_name:
+            data_name = data_name[:-8]
+        if 'shedder48_64' in data_name:
+            data_name = data_name[:-13]
     if 'salmonella' in data_name:
         if 'tolerant' in data_name:
             data_name = data_name[:-9]
@@ -129,7 +129,7 @@ if __name__ == '__main__':
             datasets[data_name[7:]] = ds
 
 
-    dir_path = './refined_modules_backup/'
+    dir_path = './refined_modules/'
     algorithm = 'WGCNA_LBG'
 
     for module_type in os.listdir(dir_path): #center type
