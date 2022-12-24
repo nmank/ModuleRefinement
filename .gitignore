@@ -2,7 +2,7 @@
 *.csv
 *.txt
 ./modules/*
-./old/*
+./old/**
 ./refined_modules/*
 *.pickle
 __pycache__/*
