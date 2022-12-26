@@ -1,0 +1,16 @@
+#ID = Affymetrix Probe Set ID
+#GB_ACC = GenBank Accession Number
+#SPOT_ID = identifies controls
+#Species Scientific Name = The genus and species of the organism represented by the probe set.
+#Annotation Date = The date that the annotations for this probe array were last updated. It will generally be earlier than the date when the annotations were posted on the Affymetrix web site.
+#Sequence Type = 
+#Sequence Source = The database from which the sequence used to design this probe set was taken.
+#Target Description = 
+#Representative Public ID = The accession number of a representative sequence. Note that for consensus-based probe sets, the representative sequence is only one of several sequences (sequence sub-clusters) used to build the consensus sequence and it is not directly used to derive the probe sequences. The representative sequence is chosen during array design as a sequence that is best associated with the transcribed region being interrogated by the probe set. Refer to the "Sequence Source" field to determine the database used.
+#Gene Title = Title of Gene represented by the probe set.
+#Gene Symbol = A gene symbol, when one is available (from UniGene).
+#ENTREZ_GENE_ID = Entrez Gene Database UID
+#RefSeq Transcript ID = References to multiple sequences in RefSeq. The field contains the ID and Description for each entry, and there can be multiple entries per ProbeSet.
+#Gene Ontology Biological Process = Gene Ontology Consortium Biological Process derived from LocusLink.  Each annotation consists of three parts: "Accession Number // Description // Evidence". The description corresponds directly to the GO ID. The evidence can be "direct", or "extended".
+#Gene Ontology Cellular Component = Gene Ontology Consortium Cellular Component derived from LocusLink.  Each annotation consists of three parts: "Accession Number // Description // Evidence". The description corresponds directly to the GO ID. The evidence can be "direct", or "extended".
+#Gene Ontology Molecular Function = Gene Ontology Consortium Molecular Function derived from LocusLink.  Each annotation consists of three parts: "Accession Number // Description // Evidence". The description corresponds directly to the GO ID. The evidence can be "direct", or "extended".

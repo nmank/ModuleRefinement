@@ -1,0 +1,15 @@
+calcom==1.0.2
+gprofiler==1.2.2
+gprofiler_official==1.0.0
+gseapy==0.12.1
+ipython==8.7.0
+matplotlib==3.5.3
+networkx==2.8.6
+numpy==1.23.2
+orthrus==1.0.9
+pandas==1.4.3
+plotly==5.10.0
+PyWGCNA==1.15.7
+scikit_learn==1.2.0
+scipy==1.9.0
+torch==1.12.1
