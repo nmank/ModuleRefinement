@@ -10351,3 +10351,4 @@ Also make sure that all modulefiles written in TCL start with the string
   self.metadata = self.metadata.loc[meta_index].append(missing_data)
 /home/nmank/.conda/envs/env1/lib/python3.8/site-packages/orthrus/core/dataset.py:160: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
   self.vardata = vardata.loc[var_index].append(missing_data)
+slurmstepd: error: *** JOB 230297 ON node2 CANCELLED AT 2022-12-26T09:57:31 DUE TO TIME LIMIT ***
