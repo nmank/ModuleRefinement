@@ -1,10 +1,19 @@
 import numpy as np
+import graph_tools_construction as gt
 from sklearn.base import BaseEstimator
-import ModuleRefinement.ModuleRefinement.center_algorithms as ca
+import center_algorithms as ca
 import pandas as pd
 from sklearn.neighbors import NearestNeighbors
 
 
+
+'''
+To DO:
+
+- sanity checks
+- plotting function
+
+'''
 
 class ModuleLBG(BaseEstimator):
 
@@ -173,6 +182,20 @@ class ModuleLBG(BaseEstimator):
                 
         return Distances
 
+    def module_expression(self, module_data: list) -> np.array:
+        if self.centrality is not None:
+            A = gt.adjacency_matrix(np.hstack(module_data), msr = 'correlation')
+            scores = gt.centrality_scores(A, centrality = self.centrality_)
+            max_score = np.max(scores) 
+            if max_score != 0:
+                scores = scores / max_score
+
+            scored_module = [scores[i]*module_data[i] for i in range(len(module_data))]
+        else:
+            scored_module = module_data
+        center = np.expand_dims(np.mean(np.hstack(scored_module),axis = 1),axis = 1)
+        return center
+
     def closest_center(self, d_mat: np.array) -> np.array:
         #find the closest center for each point
         if self.distance_ == 'l2 correlation':
@@ -200,7 +223,7 @@ class ModuleLBG(BaseEstimator):
                 elif self.center_method_ == 'flag_median':
                     self.centers_.append(ca.irls_flag([X[i] for i in idx], self.center_dimension_, 10, 'sine', 'sine')[0])
                 elif self.center_method == 'module_expression': 
-                    self.centers_.append(ca.module_expression([X[i] for i in idx], self.centrality_))
+                    self.centers_.append(self.module_expression([X[i] for i in idx]))
                 else:
                     print('center_method not recognized.')
 

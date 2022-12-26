@@ -26,7 +26,7 @@ from sklearn.svm import LinearSVC
 from sklearn.preprocessing import StandardScaler
 
 import ModuleLBG as mlbg
-import center_algorithms as ca
+import ModuleRefinement.ModuleRefinement.center_algorithms as ca
 
 import os
 

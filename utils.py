@@ -5,7 +5,7 @@ import orthrus
 from orthrus import core
 from orthrus.core import dataset, helper
 
-import center_algorithms as ca
+import ModuleRefinement.ModuleRefinement.center_algorithms as ca
 
 
 def separate_classes(data_all: pd.DataFrame, labels_all: pd.DataFrame) -> tuple:
@@ -45,8 +45,6 @@ def save_modules(split_module_data: pd.DataFrame, labels: np.array, save_path: s
         genes_in_one_module = list(split_module_data.T[labels == module_number].index)
         row = pd.DataFrame(columns = ['Feature Set'], data = [[genes_in_one_module]])
         the_modules = pd.concat([the_modules, row])
-        # the_modules = the_modules.append(row, ignore_index = True)
-
-            
-        
         helper.save_object(the_modules, save_path, overwrite=True)
+
+

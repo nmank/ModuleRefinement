@@ -2,7 +2,7 @@
 
 #sys.path.append('/home/katrina/a/mankovic/FlagIRLS')
 
-import center_algorithms as ca
+import ModuleRefinement.ModuleRefinement.center_algorithms as ca
 
 import orthrus
 from orthrus import core
