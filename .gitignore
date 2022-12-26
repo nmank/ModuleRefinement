@@ -1,9 +1,9 @@
 *.png
 *.csv
 *.txt
-./modules/*
-./old/**
-./refined_modules/*
+*/modules/*
+*/old/**
+*/refined_modules/*
 *.pickle
-__pycache__/*
-./trash/*
+*__pycache__/*
+*/trash/*
