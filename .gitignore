@@ -6,3 +6,4 @@
 *.pickle
 *__pycache__/*
 */trash/*
+ModuleRefinement/__pycache__*
