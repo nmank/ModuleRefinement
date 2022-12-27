@@ -15,18 +15,22 @@ if __name__ == '__main__':
 
 
     parser = argparse.ArgumentParser()
+                        #default = [['module_expression', 1, 1, 'all', 'salmonella_Liver'],
+                        #           ['flag_mean', 1, 1, 'all', 'salmonella_Liver'],
+                        #           ['flag_median', 1, 1, 'all', 'salmonella_Liver']],
     parser.add_argument("--methods", 
-                        default = [['module_expression', 1, 1, 'all', 'salmonella_Liver'],
-                                   ['flag_mean', 1, 1, 'all', 'salmonella_Liver'],
-                                   ['flag_median', 1, 1, 'all', 'salmonella_Liver']], 
+                        default = [['module_expression', 1, 1, 'all', 'gse73072_hrv_48_64_shedder48_64'],
+                                   ['flag_mean', 1, 1, 'all', 'gse73072_hrv_48_64_shedder48_64'],
+                                   ['flag_median', 1, 1, 'all', 'gse73072_hrv_48_64_shedder48_64']],
                         type = list, 
                         help = "a list of lists of parameters: [[module representative, data dimension, center dimension, fold, dataset]]")
     parser.add_argument("--results_dir", default = 'experiments/results/', type = str, help = "path to results directory")
+    parser.add_argument("--refined_modules_dir", default = 'experiments/refined_modules/', type = str, help = "path to refined modules directory")
     args = parser.parse_args()
 
     params = args.methods
     results_dir = args.results_dir
-
+    refined_modules_dir = args.refined_modules_dir
 
     go_results = pd.DataFrame(columns = 
                                 ['Data Set', 'Algorithm', 'Central Prototype', 
@@ -47,20 +51,22 @@ if __name__ == '__main__':
         else:
             organism = 'mmusculus'
 
-        module_path = f'../refined_modules/{central_prototype}_{center_dimension}_{data_dimension}/{fold}/{dataset_name}.pickle'
+        module_path = f'{refined_modules_dir}/{central_prototype}_{center_dimension}_{data_dimension}/{fold}/{dataset_name}.pickle'
 
         the_modules, all_features = utl.load_modules(module_path)
-
+        print(f'modules {central_prototype}_{center_dimension}_{data_dimension} loaded')
         best_feats = pd.DataFrame()
         #module_number = 2
         for i in range(len(the_modules)):
             module_genes = the_modules.iloc[i].item() 
+            
+            print('.') 
 
             top_entries = utl.top_k(module_genes, organism,k=10)
         
-            if np.sum([('virus' in n)   for n in top_entries['name']])>0:
+            if np.sum([('immun' in n)   for n in top_entries['name']])>0:
                 if 'gse' in dataset_name:
-                    if np.sum([('immun' in n) for n in top_entries['name']])>0:
+                    if np.sum([('virus' in n) for n in top_entries['name']])>0:
                         print(f'module {i}')
                         print(f'n genes {len(module_genes)}')
                         column = pd.DataFrame(columns = [f'module {i}'], data = module_genes)
