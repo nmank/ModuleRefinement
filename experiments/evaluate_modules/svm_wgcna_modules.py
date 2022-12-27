@@ -47,7 +47,8 @@ if __name__ == '__main__':
             data_all.index.names = ['SampleID']
             labels_all = pd.read_csv(f'{data_name}_labels.csv', index_col = 0)
             ds = DS(data = data_all, metadata = labels_all)
-            datasets[data_name[7:]] = ds
+            ds_name = data_name.split('/')[-1]
+            datasets[ds_name] = ds
 
 
 

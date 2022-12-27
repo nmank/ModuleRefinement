@@ -20,13 +20,12 @@ import argparse
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data_dir", default = '/home/nmank/ModuleRefinement/data', type = str, help = "path to data directory")
-    parser.add_argument("--refined_modules_dir", default = '/home/nmank/ModuleRefinement/experiments/refined_modules', type = str, help = "path to refined modules directory")
-    parser.add_argument("--results_file", default = '/home/nmank/ModuleRefinement/experiments/results/svm_lbg_score.csv', type = str, help = "path to results file")
+    parser.add_argument("--data_dir", default = 'data', type = str, help = "path to data directory")
+    parser.add_argument("--refined_modules_dir", default = 'experiments/refined_modules', type = str, help = "path to refined modules directory")
+    parser.add_argument("--results_file", default = 'experiments/results/sanity/svm_lbg_score.csv', type = str, help = "path to results file")
     args = parser.parse_args()
 
     data_dir = args.data_dir
-    modules_dir = args.modules_dir
     refined_modules_dir = args.refined_modules_dir
     results_file = args.results_file
 
@@ -45,7 +44,8 @@ if __name__ == '__main__':
             data_all.index.names = ['SampleID']
             labels_all = pd.read_csv(f'{data_name}_labels.csv', index_col = 0)
             ds = DS(data = data_all, metadata = labels_all)
-            datasets[data_name[7:]] = ds
+            ds_name = data_name.split('/')[-1]
+            datasets[ds_name] = ds
 
 
     algorithm = 'WGCNA_LBG'
