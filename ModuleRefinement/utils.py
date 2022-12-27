@@ -10,6 +10,13 @@ import os
 import orthrus
 from orthrus import core
 from orthrus.core import dataset, helper
+from orthrus.core.pipeline import *
+from sklearn.preprocessing import FunctionTransformer
+from orthrus.preprocessing.imputation import HalfMinimum
+from sklearn.metrics import balanced_accuracy_score
+from sklearn.svm import LinearSVC
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import StratifiedKFold
 
 
 def separate_classes(data_all: pd.DataFrame, labels_all: pd.DataFrame) -> tuple:
@@ -148,7 +155,7 @@ def module_significance(module_genes: list, organism: str) -> int:
     mod_sig = np.sum(-np.log10(np.array(res[query]['p_value'])))
     return mod_sig
 
-def shorten_data_name(data_name: str):
+def shorten_data_name(data_name: str) -> str:
     if 'gse' in data_name:
         if 'control' in data_name:
             data_name = data_name[:-8]
@@ -160,3 +167,56 @@ def shorten_data_name(data_name: str):
         if 'susceptible' in data_name:
             data_name = data_name[:-12]   
     return data_name 
+
+def loso_test(ds, fold_number):
+    supervised_attr = 'label'
+
+    partitioner = StratifiedKFold(n_splits=5, shuffle=True, random_state=0)
+    partition_5fold = Partition(process=partitioner,
+                            process_name='partition_5fold',
+                            verbosity=2,
+                            split_attr = supervised_attr)
+
+    svm_model = Classify(process=LinearSVC(dual=False),
+                process_name='SVC',
+                class_attr=supervised_attr,
+                verbosity=1)
+
+    # log2 transformation
+    log2 = Transform(process=FunctionTransformer(np.log2),
+                    process_name='log2',
+                    retain_f_ids=True)
+
+    # half-minimum imputation
+    hf = Transform(process=HalfMinimum(missing_values=0),
+                process_name='half-min',
+                retain_f_ids=True)
+
+    
+    std = Transform(process=StandardScaler(),
+                    process_name='std',
+                    retain_f_ids=True)
+
+
+    # define balance accuracy score process
+    scorer = balanced_accuracy_score
+    bsr = Score(process=scorer,
+            process_name='bsr',
+            pred_attr=supervised_attr,
+            verbosity=0)
+
+    if 'susceptible' in list(ds.metadata['label']): #no log normalization for salmonella
+        processes=(partition_5fold, hf, std, svm_model, bsr)
+    else:    
+        processes=(partition_5fold, hf, log2, std, svm_model, bsr)
+
+    pipeline = Pipeline(processes=processes, verbosity = 0)
+
+    ds.metadata['label'] = ds.metadata['label'].astype('str')
+
+    pipeline.run(ds, checkpoint=False)
+
+    fold_test_bsr = bsr.collapse_results()['class_pred_scores'].loc['Test'].loc[f'batch_{fold_number}']
+    # train_scores = scores.loc['Train']
+
+    return fold_test_bsr
