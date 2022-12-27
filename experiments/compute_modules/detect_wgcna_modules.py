@@ -4,9 +4,8 @@ import os
 from sklearn.model_selection import StratifiedKFold
 import argparse
 
-import sys
-sys.path.append('/data4/mankovic/ModuleRefinement/ModuleRefinement')
-import utils as utl
+import ModuleRefinement
+import ModuleRefinement.utils as utl
 
 
 '''
