@@ -11,6 +11,8 @@ from orthrus.core.dataset import DataSet as DS
 
 import os
 
+import sys
+sys.path.append('/home/nmank/ModuleRefinement/ModuleRefinement/')
 import utils as utl
 
 import argparse
@@ -78,11 +80,11 @@ if __name__ == '__main__':
                 else:
                     organism = 'mouse'
 
-                if ('True' not in dataset_name) and ('False' not in dataset_name):
+                if ('ebola' not in dataset_name) and ('Spleen' not in dataset_name):
                 
                     data_name = utl.shorten_data_name(dataset_name)
                     ds = datasets[data_name]
-
+                    print(f'starting module {module_path}')
                     the_modules, all_features = utl.load_modules(module_path)
 
                     module_number = 0
@@ -102,6 +104,7 @@ if __name__ == '__main__':
                                                     data_dimension, center_dimension, fold,
                                                     module_number, bsr, module_size]])
                         svm_results = svm_results.append(row, ignore_index = True)
+                        print(f'module number {module_number} finished')
                         module_number +=1
 
     svm_results.to_csv(results_file)
