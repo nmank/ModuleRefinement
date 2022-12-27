@@ -1,0 +1,11 @@
+,native,name,p_value
+0,GO:0005737,cytoplasm,3.225330256344345e-16
+1,GO:0043227,membrane-bounded organelle,1.1186021667959326e-15
+3,GO:0005515,protein binding,1.0439663479271889e-13
+4,GO:0043226,organelle,2.0421565038692524e-13
+6,GO:0043233,organelle lumen,3.33210110852648e-13
+7,GO:0070013,intracellular organelle lumen,3.33210110852648e-13
+8,GO:0031974,membrane-enclosed lumen,3.33210110852648e-13
+11,GO:0005654,nucleoplasm,4.01817924310611e-11
+18,GO:0043231,intracellular membrane-bounded organelle,1.0282822475254631e-10
+25,GO:0005622,intracellular anatomical structure,4.717765734409553e-10

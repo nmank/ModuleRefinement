@@ -1,0 +1,11 @@
+,native,name,p_value
+0,GO:0005829,cytosol,2.2574009981694086e-20
+1,GO:0005737,cytoplasm,3.2591401960984463e-19
+4,GO:0005515,protein binding,3.7515343100366205e-14
+8,GO:0048518,positive regulation of biological process,6.388009113295695e-13
+9,GO:0005654,nucleoplasm,6.929523845691642e-13
+35,GO:0048522,positive regulation of cellular process,5.052293136574781e-11
+43,GO:0031323,regulation of cellular metabolic process,1.3982178202313464e-10
+49,GO:0009893,positive regulation of metabolic process,2.6505615153287303e-10
+56,GO:0070013,intracellular organelle lumen,6.481862213354251e-10
+57,GO:0031974,membrane-enclosed lumen,6.481862213354251e-10

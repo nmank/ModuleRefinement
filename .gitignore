@@ -1,5 +1,4 @@
 *.png
-*.csv
 */modules/*
 */old/**
 */refined_modules/*

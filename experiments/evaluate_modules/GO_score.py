@@ -1,8 +1,9 @@
 #import sys
 
 #sys.path.append('/home/katrina/a/mankovic/FlagIRLS')
-
-import ModuleRefinement.ModuleRefinement.center_algorithms as ca
+import sys
+sys.path.append('./ModuleRefinement')
+import center_algorithms as ca
 
 import orthrus
 from orthrus import core
@@ -27,15 +28,15 @@ import utils as utl
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data_dir", default = 'data', type = str, help = "path to data directory")
-    parser.add_argument("--modules_dir", default = 'experiments/modules', type = str, help = "path to modules directory")
-    parser.add_argument("--refined_modules_dir", default = 'experiments/refined_modules', type = str, help = "path to refined modules directory")
-    parser.add_argument("--results_file", default = 'experiments/results/go_score.csv', type = str, help = "path to results file")
+    parser.add_argument("--data_dir", default = '/home/nmank/ModuleRefinement/data', type = str, help = "path to data directory")
+    parser.add_argument("--modules_dir", default = '/home/nmank/ModuleRefinement/experiments/modules', type = str, help = "path to modules directory")
+    parser.add_argument("--refined_modules_dir", default = '/home/nmank/ModuleRefinement/experiments/refined_modules', type = str, help = "path to refined modules directory")
+    parser.add_argument("--results_file", default = '/home/nmank/ModuleRefinement/experiments/results/go_score.csv', type = str, help = "path to results file")
     args = parser.parse_args()
 
     data_dir = args.data_dir
     modules_dir = args.modules_dir
-    refined_modules_dir = args.modules_dir
+    refined_modules_dir = args.refined_modules_dir
     results_file = args.results_file
 
 
@@ -60,7 +61,7 @@ if __name__ == '__main__':
             folder_path = f'{module_type_dir}/{folds}'
 
             for dataset_name in os.listdir(folder_path):
-                if 'ebola' not in dataset_name:
+                if ('ebola' not in dataset_name) and ('Spleen' not in dataset_name):
                     module_path = f'{folder_path}/{dataset_name}'
 
                     if 'fold' in dataset_name:
@@ -106,7 +107,7 @@ if __name__ == '__main__':
         folder_path = f'{modules_dir}/{folds}'
 
         for dataset_name in os.listdir(folder_path):
-            if 'ebola' not in dataset_name:
+            if ('ebola' not in dataset_name) and ('Spleen' not in dataset_name):
                 module_path = f'{folder_path}/{dataset_name}'
 
                 if 'fold' in dataset_name:

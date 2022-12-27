@@ -1,0 +1,11 @@
+,native,name,p_value
+0,GO:0005737,cytoplasm,3.3085799423485387e-06
+1,GO:0030218,erythrocyte differentiation,4.282791974364363e-05
+3,GO:0034101,erythrocyte homeostasis,7.354726872309436e-05
+4,GO:0005515,protein binding,0.00011360261941496126
+6,GO:0002262,myeloid cell homeostasis,0.00041886360338202106
+7,GO:0048821,erythrocyte development,0.000633794823803894
+9,GO:0014731,spectrin-associated cytoskeleton,0.0012103550475100948
+10,GO:0061515,myeloid cell development,0.0012663780448187005
+15,GO:0030492,hemoglobin binding,0.0025712357921657257
+17,GO:0048872,homeostasis of number of cells,0.0029218437117210956
