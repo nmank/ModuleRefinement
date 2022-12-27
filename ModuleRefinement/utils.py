@@ -220,3 +220,15 @@ def loso_test(ds, fold_number):
     # train_scores = scores.loc['Train']
 
     return fold_test_bsr
+
+def top_k(module_genes: list, organism: str, k: int) -> int:
+    gp = GProfiler(return_dataframe=True)
+    res = gp.profile(organism=organism,
+            query=module_genes)
+    query = ['GO' in s for s in res['source']]
+    qres = res[query]
+    if 'p_value' in qres.columns:
+        top_10_rows = qres.nsmallest(k, 'p_value')
+        return top_10_rows[['native', 'name', 'p_value']]
+    else:
+        return pd.DataFrame(columns = ['native', 'name', 'p_value'])
