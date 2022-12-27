@@ -80,7 +80,6 @@ if __name__ == '__main__':
 
                     the_modules, all_features = utl.load_modules(module_path)
 
-                    print(f'doing modules {module_path}')
 
                     module_number = 0
                     for module in the_modules.iterrows():
