@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH --output=slurm1.out
-#SBATCH --error=slurm1.err
+#SBATCH --output=experiments/slurm_scripts/slurm1.out
+#SBATCH --error=experiments/slurm_scripts/slurm1.err
 #SBATCH --partition=week-long-cpu
 #SBATCH --nodes=1
 conda activate env1
