@@ -18,21 +18,26 @@ import pandas as pd
 import plotly.express as px
 import os
 
-from gprofiler import GProfiler
+import argparse
 
 import utils as utl
 
-def module_significance(module_genes: list, organism: str) -> int:
-    gp = GProfiler(return_dataframe=True)
-    res = gp.profile(organism=organism,
-            query=module_genes)
-    query = (res['p_value'] < .05) &\
-            (['GO' in s for s in res['source']])
-    mod_sig = np.sum(-np.log10(np.array(res[query]['p_value'])))
-    return mod_sig
 
 
 if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--data_dir", default = 'data', type = str, help = "path to data directory")
+    parser.add_argument("--modules_dir", default = 'experiments/modules', type = str, help = "path to modules directory")
+    parser.add_argument("--refined_modules_dir", default = 'experiments/refined_modules', type = str, help = "path to refined modules directory")
+    parser.add_argument("--results_file", default = 'experiments/results/go_score.csv', type = str, help = "path to results file")
+    args = parser.parse_args()
+
+    data_dir = args.data_dir
+    modules_dir = args.modules_dir
+    refined_modules_dir = args.modules_dir
+    results_file = args.results_file
+
 
     go_results = pd.DataFrame(columns = 
                                 ['Data Set', 'Algorithm', 'Central Prototype', 
@@ -40,12 +45,11 @@ if __name__ == '__main__':
                                 'Module Number', 'GO Significance'])
 
 
-    dir_path = './refined_modules/'
     algorithm = 'WGCNA_LBG'
 
-    for module_type in os.listdir(dir_path): #center type
+    for module_type in os.listdir(refined_modules_dir): #center type
 
-        module_type_dir = dir_path + module_type
+        module_type_dir = f'{refined_modules_dir}/{module_type}'
 
         central_prototype = module_type[:-4]
         data_dimension = module_type[-1]
@@ -79,7 +83,7 @@ if __name__ == '__main__':
                         module_genes = module[1].item()   
                         
                         try:
-                            mod_sig = module_significance(module_genes, organism)
+                            mod_sig = utl.module_significance(module_genes, organism)
                     
                     
                             row = pd.DataFrame(columns = list(go_results.columns),
@@ -94,13 +98,12 @@ if __name__ == '__main__':
                         module_number +=1
 
 
-    module_type_path = './modules/'
     algorithm = 'WGCNA'
     
 
-    for folds in os.listdir(module_type_dir): #all or 5fold
+    for folds in os.listdir(modules_dir): #all or 5fold
         
-        folder_path = f'{module_type_dir}/{folds}'
+        folder_path = f'{modules_dir}/{folds}'
 
         for dataset_name in os.listdir(folder_path):
             if 'ebola' not in dataset_name:
@@ -126,7 +129,7 @@ if __name__ == '__main__':
                     module_genes = module[1].item()   
                     
                     try:
-                        mod_sig = module_significance(module_genes, organism)
+                        mod_sig = utl.module_significance(module_genes, organism)
                 
                 
                         row = pd.DataFrame(columns = list(go_results.columns),
@@ -140,4 +143,4 @@ if __name__ == '__main__':
                     module_number +=1
 
 
-    go_results.to_csv('GO_score_sanity.csv')
+    go_results.to_csv(results_file)

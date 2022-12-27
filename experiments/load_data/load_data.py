@@ -53,24 +53,6 @@ def generate_gse73072_dataset(dPath, tBin, study, out_dir):
     all_data.to_csv(f'{out_dir}gse73072_hrv_{tBin}.csv')
     all_labels.to_csv(f'{out_dir}gse73072_hrv_{tBin}_labels.csv')
 
-def generate_ebola_dataset(tissue, out_path):
-    dPath = '/data3/darpa/all_CCD_processed_data/columbia-TCC-rnaseq.h5'
-    ccd = calcom.io.CCDataSet(dPath)
-    q0 = {'Tissue': tissue, 'Infection': 'Ebola'}
-    idxs = ccd.find(q0)
-
-    sample_ids = ccd.generate_labels('_id', idx_list = idxs)
-    data = ccd.generate_data_matrix(idx_list=idxs)
-    probe_ids = list(ccd.variable_names)
-    all_data = pd.DataFrame(data = data, columns = probe_ids, index = sample_ids)
-
-    labels = ccd.generate_labels('Phenotype', idx_list=idxs)
-    all_labels = pd.DataFrame(data = labels, columns = ['label'], index = sample_ids)
-    all_labels = all_labels.replace('Lethal/hemorrhage', 'Lethal')
-
-    all_data.to_csv(f'{out_path}ebola_{tissue}.csv')
-    all_labels.to_csv(f'{out_path}ebola_{tissue}_labels.csv')
-
 def generate_salmonella_dataset(tissue, out_path):
     
     dPath = '/data3/darpa/all_CCD_processed_data/tamu-rnaseq-kranti.h5'

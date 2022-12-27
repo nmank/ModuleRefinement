@@ -1,6 +1,6 @@
 import numpy as np
 from sklearn.base import BaseEstimator
-import ModuleRefinement.ModuleRefinement.center_algorithms as ca
+import center_algorithms as ca
 import pandas as pd
 from sklearn.neighbors import NearestNeighbors
 

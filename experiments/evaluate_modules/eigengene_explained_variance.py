@@ -2,74 +2,45 @@
 #import sys
 #sys.path.append('/home/katrina/a/mankovic/ZOETIS/Fall2021/Orthrus/orthrus')
 
-from torch import norm
-import orthrus
-from orthrus import core
-from orthrus.core import dataset, helper
-from sklearn.model_selection import LeaveOneOut
+import os
 import numpy as np
-from matplotlib import pyplot as plt
-from sklearn.decomposition import PCA
-
-import pickle
-
 import pandas as pd
+import argparse
 
 from orthrus.core.dataset import DataSet as DS
 
 from orthrus.core.pipeline import *
-from sklearn.preprocessing import FunctionTransformer
-from orthrus.preprocessing.imputation import HalfMinimum
-from sklearn.pipeline import make_pipeline
-from sklearn.metrics import balanced_accuracy_score
-from sklearn.svm import LinearSVC
-from sklearn.preprocessing import StandardScaler
 
+import sys
+sys.path.append('/data4/mankovic/ModuleRefinement/ModuleRefinement')
 import ModuleLBG as mlbg
-import ModuleRefinement.ModuleRefinement.center_algorithms as ca
-
-import os
-
+import center_algorithms as ca
 import utils as utl
 
 
-#import sys
-#sys.path.append('/home/katrina/a/mankovic/')
-#from PathwayAnalysis.SpectralClustering import SpectralClustering
-
-from sklearn.model_selection import StratifiedKFold
-
-
-def shorten_data_name(data_name):
-    if 'gse' in data_name:
-        if 'control' in data_name:
-            data_name = data_name[:-8]
-        if 'shedder48_64' in data_name:
-            data_name = data_name[:-13]
-    if 'salmonella' in data_name:
-        if 'tolerant' in data_name:
-            data_name = data_name[:-9]
-        if 'susceptible' in data_name:
-            data_name = data_name[:-12]
-    if 'ebola' in data_name:
-        if 'Lethal' in data_name:
-            data_name = data_name[:-7]
-        if 'Tolerant' in data_name:
-            data_name = data_name[:-9]      
-    return data_name
-      
-
-
 if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--data_dir", default = 'data', type = str, help = "path to data directory")
+    parser.add_argument("--refined_modules_dir", default = 'experiments/refined_modules', type = str, help = "path to refined modules directory")
+    parser.add_argument("--module_types", default = ['eigengene_1_1','eigengene_2_1','eigengene_4_1','eigengene_8_1'], type = list, 
+                        help = "list of the module representative types for explained variance")
+    parser.add_argument("--results_file", default = 'experiments/results/evr_results.csv', type = str, help = "results file path")
+    args = parser.parse_args()
+
+    data_dir = args.data_dir
+    refined_modules_dir = args.refined_modules_dir
+    module_types = args.module_types
+    results_file = args.results_file
 
     evr_results = pd.DataFrame(columns = 
                                 ['Data Set', 'Center Dimension', 'Fold', 
                                 'Module Number', 'Explained Variance', 'Size'])
 
     datasets = {}
-    for f_name in os.listdir('./data/'):
+    for f_name in os.listdir(data_dir):
         if 'labels' not in f_name:
-            file_name = f'./data/{f_name}'
+            file_name = f'{data_dir}/{f_name}'
             data_name = file_name[:-4]
 
             data_all = pd.read_csv(file_name, index_col = 0)
@@ -78,15 +49,11 @@ if __name__ == '__main__':
             ds = DS(data = data_all, metadata = labels_all)
             datasets[data_name[7:]] = ds
 
-
-    dir_path = './refined_modules/'
     algorithm = 'WGCNA_LBG'
-
-    module_types  = ['eigengene_1_1','eigengene_2_1','eigengene_4_1','eigengene_8_1'] #center type
 
     for module_type in module_types:
 
-        module_type_dir = dir_path + module_type
+        module_type_dir = f'{refined_modules_dir}/{module_type}'
 
         central_prototype = module_type[:-4]
         data_dimension = int(module_type[-1])
@@ -112,7 +79,7 @@ if __name__ == '__main__':
                 else:
                     organism = 'mouse'
                 
-                data_name = shorten_data_name(dataset_name)
+                data_name = utl.shorten_data_name(dataset_name)
                 ds = datasets[data_name]
 
                 the_modules, all_features = utl.load_modules(module_path)
@@ -137,4 +104,4 @@ if __name__ == '__main__':
 
                     module_number +=1
 
-    evr_results.to_csv('evr_results.csv')
+    evr_results.to_csv(results_file)
