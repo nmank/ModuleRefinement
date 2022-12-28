@@ -19,7 +19,7 @@ See examples for a notebook that details simple usage of ModuleRefinement along 
 Run the Following line of code:
 * python -m pip install --index-url https://test.pypi.org/simple/ --no-deps ModuleRefinement==0.0.5
 
-### Executing program
+<!-- ### Executing program
 
 * How to run the program
 * Step-by-step bullets
@@ -32,7 +32,7 @@ code blocks for commands
 Any advise for common problems or issues.
 ```
 command to run if program contains helper info
-```
+``` -->
 
 ## Authors
 
