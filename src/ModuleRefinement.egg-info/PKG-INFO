@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: ModuleRefinement
+Version: 0.0.5
+Summary: A package for module refinement
+Author-email: Nathan Mankovich <nmank@colostate.edu>
+Project-URL: Homepage, https://github.com/nmank/ModuleRefinement
+Project-URL: Bug Tracker, https://github.com/nmank/ModuleRefinement/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: ==3.8.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.md

@@ -4,7 +4,6 @@ import os
 from sklearn.model_selection import StratifiedKFold
 import argparse
 
-import ModuleRefinement
 import ModuleRefinement.utils as utl
 
 
@@ -19,7 +18,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--data_dir", default = 'data', type = str, help = "path to data directory")
     parser.add_argument("--modules_dir", default = 'experiments/modules', type = str, help = "path to modules directory")
-    parser.add_argument("--results_dir", default = 'experiments/results/wgcna_rquared_gse_new.csv', type = str, 
+    parser.add_argument("--results_dir", default = 'experiments/results/wgcna_rquared.csv', type = str, 
                          help = "path to results directory")
     args = parser.parse_args()
 
@@ -45,8 +44,6 @@ if __name__ == '__main__':
 
             out_file = f'{modules_dir}/all/{file_name[:-4]}.pickle'
             prms[file_name[:-4]] = utl.wgcna_modules(data_all, species, out_file)
-
-            import IPython; IPython.embed()
 
             for dta, lbl in zip(class_data, unique_labels):
                 out_file = f'{modules_dir}/all/{file_name[:-4]}_{lbl}.pickle'
