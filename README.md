@@ -14,15 +14,25 @@ See examples for a notebook that details simple usage of ModuleRefinement along 
 
 * See requirements.txt
 
-### Installing
-
-Run the Following line of code:
-* python -m pip install --index-url https://test.pypi.org/simple/ --no-deps ModuleRefinement==0.0.8
 
 ### Quick Start
 
-See ./examples/small_example.ipynb for a notebook to compute
+1. Initialize conda environment
+    '''
+    conda create --name module_refinement
+    conda activate module_refinement
+    '''
+2. Install requirements
+    '''
+    pip install -r requirements.txt
+    '''
+3. Install ModuleRefinement package
+    '''
+    python -m pip install --index-url https://test.pypi.org/simple/ --no-deps ModuleRefinement==0.0.8
+    '''
+4. Open ./examples/small_example.ipynb and run it within the module_refinement environment.
 
+small_example.ipynb shows how to compute:
 * WGCNA modules
 * Refined modules using subspace LBG clustering
 * Relative gain in GO signiciance
