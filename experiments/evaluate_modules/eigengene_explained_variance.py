@@ -11,11 +11,9 @@ from orthrus.core.dataset import DataSet as DS
 
 from orthrus.core.pipeline import *
 
-import sys
-sys.path.append('/data4/mankovic/ModuleRefinement/ModuleRefinement')
-import ModuleLBG as mlbg
-import center_algorithms as ca
-import utils as utl
+from ModuleRefinement import ModuleLBG as mlbg
+from ModuleRefinement import center_algorithms as ca
+from ModuleRefinement import utils as utl
 
 
 if __name__ == '__main__':
