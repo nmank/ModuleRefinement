@@ -17,7 +17,16 @@ See examples for a notebook that details simple usage of ModuleRefinement along 
 ### Installing
 
 Run the Following line of code:
-* python -m pip install --index-url https://test.pypi.org/simple/ --no-deps ModuleRefinement==0.0.5
+* python -m pip install --index-url https://test.pypi.org/simple/ --no-deps ModuleRefinement==0.0.8
+
+### Quick Start
+
+See ./examples/small_example.ipynb for a notebook to compute
+
+* WGCNA modules
+* Refined modules using subspace LBG clustering
+* Relative gain in GO signiciance
+* Relative gain in classification BSR
 
 <!-- ### Executing program
 
@@ -41,7 +50,7 @@ nmank@colostate.edu
 
 ## Version History
 
-* 0.5
+* 0.8
     * Initial functional release
 
 ## License

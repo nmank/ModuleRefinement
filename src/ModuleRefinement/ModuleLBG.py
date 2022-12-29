@@ -64,6 +64,10 @@ class ModuleLBG(BaseEstimator):
     @property
     def distortions(self):
         return self.distortions_
+    
+    @property
+    def center_seed(self):
+        return self.center_seed_
         
     def fit_transform(self, X: np.array, y: np.array = None) -> None:
         if type(X) == np.array:

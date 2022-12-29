@@ -3,7 +3,7 @@ import numpy as np
 
 from gprofiler import GProfiler
 import PyWGCNA
-import ModuleRefinement.ModuleLBG as mlbg
+from ModuleRefinement import ModuleLBG
 
 import os
 
@@ -127,10 +127,10 @@ def refined_modules(split_data: pd.DataFrame, module_path: str, center_methods: 
         restricted_data = split_data[feature_names]
 
         if center_method[2] > 1:
-            my_mlbg = mlbg.ModuleLBG(center_method = center_method[0], center_dimension = center_method[1],
+            my_mlbg = ModuleLBG(center_method = center_method[0], center_dimension = center_method[1],
                                  data_dimension = center_method[2], distance = 'max correlation', centrality = 'degree')
         else:
-            my_mlbg = mlbg.ModuleLBG(center_method = center_method[0], center_dimension = center_method[1],
+            my_mlbg = ModuleLBG(center_method = center_method[0], center_dimension = center_method[1],
                                  data_dimension = center_method[2], distance = 'correlation', centrality = 'degree')
 
         normalized_split_data = my_mlbg.process_data(np.array(restricted_data))

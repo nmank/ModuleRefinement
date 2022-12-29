@@ -54,7 +54,7 @@ if __name__ == '__main__':
             skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=0)
             skf.get_n_splits(data_all, labels_all)
 
-            fold_number = 0 #was 3
+            fold_number = 0 
             for train_index, test_index in skf.split(data_all, labels_all):
                 split_data = data_all.iloc[train_index]
                 split_labels = labels_all.iloc[train_index]

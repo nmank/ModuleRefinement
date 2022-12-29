@@ -1,3 +1,4 @@
+*.ipynb_checkpoint*
 *.png
 */modules/*
 .*old/*
@@ -7,3 +8,7 @@
 */trash/*
 *.csv
 ModuleRefinement/__pycache__*
+./examples/modules/*
+./examples/refined_modules/*
+./experiments/modules/*
+./exeriments/refined_modules/*
