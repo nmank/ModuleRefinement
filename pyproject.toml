@@ -19,7 +19,7 @@ requires = ["calcom==1.0.2",
 
 [project]
 name = "ModuleRefinement"
-version = "0.0.8"
+version = "0.0.9"
 authors = [
   { name="Nathan Mankovich", email="nmank@colostate.edu" },
 ]

@@ -30,7 +30,7 @@ See `requirements.txt`. `ModuleRefinement` was built with Python 3.8.8.
 1. Install `ModuleRefinement` package
 
     ```
-    python -m pip install --index-url https://test.pypi.org/simple/ --no-deps ModuleRefinement==0.0.8
+    python -m pip install --index-url https://test.pypi.org/simple/ --no-deps ModuleRefinement==0.0.9
     ```
 
 1. Open `./examples/small_example.ipynb` and run it within the`module_refinement` environment.
