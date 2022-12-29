@@ -7,6 +7,7 @@
 *__pycache__/*
 */trash/*
 *.csv
+*.pyc
 ModuleRefinement/__pycache__*
 ./examples/modules/*
 ./examples/refined_modules/*
