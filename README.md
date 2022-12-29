@@ -18,18 +18,18 @@ See examples for a notebook that details simple usage of ModuleRefinement along 
 ### Quick Start
 
 1. Initialize conda environment
-    '''
+    ```
     conda create --name module_refinement
     conda activate module_refinement
-    '''
+    ```
 2. Install requirements
-    '''
+    ```
     pip install -r requirements.txt
-    '''
+    ```
 3. Install ModuleRefinement package
-    '''
+    ```
     python -m pip install --index-url https://test.pypi.org/simple/ --no-deps ModuleRefinement==0.0.8
-    '''
+    ```
 4. Open ./examples/small_example.ipynb and run it within the module_refinement environment.
 
 small_example.ipynb shows how to compute:
