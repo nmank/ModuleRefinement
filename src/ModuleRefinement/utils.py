@@ -97,21 +97,23 @@ def wgcna_modules(split_data: pd.DataFrame, species: str, save_path: str) -> flo
 
 def refined_modules(split_data: pd.DataFrame, module_path: str, center_methods: list = [],
                     save_path_prefix: str = 'experiments/refined_modules'):
-    split_path = module_path.split('/')
+    split_path, split_path_file = os.path.split(module_path)
+    split_path_end = os.path.split(split_path)[1]
+
 
     the_modules, _ = load_modules(module_path)
     
     for center_method in center_methods:
         center_method_str = f'{center_method[0]}_{center_method[1]}_{center_method[2]}'
-        save_path0 = f'{save_path_prefix}/{center_method_str}'
+        save_path0 = os.path.join(save_path_prefix, center_method_str)
         if not os.path.isdir(save_path0):
             os.mkdir(save_path0)
         
-        save_path1 = f'{save_path0}/{split_path[2]}'
+        save_path1 = os.path.join(save_path0, split_path_end)
         if not os.path.isdir(save_path1):
             os.mkdir(save_path1)
 
-        save_path =  f'{save_path1}/{split_path[3][:-7]}.pickle'
+        save_path =  os.path.join(save_path1,f'{split_path_file[:-7]}.pickle')
 
         split_data = split_data.loc[:, (split_data != 0).any(axis=0)] #remove columns with all 0s
 
