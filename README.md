@@ -19,7 +19,7 @@ See examples for a notebook that details simple usage of ModuleRefinement along 
 
 1. Initialize conda environment
     ```
-    conda create --name module_refinement
+    conda create --name module_refinement python=3.8.8
     conda activate module_refinement
     ```
 2. Install requirements
