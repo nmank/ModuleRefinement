@@ -11,7 +11,7 @@ numpy==1.23.2
 orthrus==1.0.9
 pandas==1.4.3
 plotly==5.10.0
-PyWGCNA==1.15.7
+PyWGCNA==1.0.1
 scikit_learn==1.2.0
 scipy==1.9.3
 torch==1.12.1
