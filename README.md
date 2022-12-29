@@ -1,38 +1,42 @@
 # ModuleRefinement
 
-A package for gene co-expression module refinement.
-
 ## Description
 
-A repo for re-producing the results in the gene co-expression module refinement paper.
+ModuleRefinement is a package for gene co-expression module refinement. This package provides an API for reproducing the results in the gene co-expression module refinement paper.
 
-See examples for a notebook that details simple usage of ModuleRefinement along with PyWGCNA. 
+See `examples/small_example.ipynb` for a notebook that details simple usage of ModuleRefinement along with PyWGCNA. 
 
 ## Getting Started
 
 ### Dependencies
 
-* See requirements.txt
-
+See `requirements.txt`. `ModuleRefinement` was built with Python 3.8.8.
 
 ### Quick Start
 
 1. Initialize conda environment
+
     ```
     conda create --name module_refinement python=3.8.8
     conda activate module_refinement
     ```
-2. Install requirements
+
+1. Install requirements
+
     ```
     pip install -r requirements.txt
     ```
-3. Install ModuleRefinement package
+
+1. Install `ModuleRefinement` package
+
     ```
     python -m pip install --index-url https://test.pypi.org/simple/ --no-deps ModuleRefinement==0.0.8
     ```
-4. Open ./examples/small_example.ipynb and run it within the module_refinement environment.
 
-small_example.ipynb shows how to compute:
+1. Open `./examples/small_example.ipynb` and run it within the`module_refinement` environment.
+
+`small_example.ipynb` shows how to compute:
+
 * WGCNA modules
 * Refined modules using subspace LBG clustering
 * Relative gain in GO signiciance
@@ -55,8 +59,7 @@ command to run if program contains helper info
 
 ## Authors
 
-Nathan Mankovich
-nmank@colostate.edu
+Nathan Mankovich: [nmank@colostate.edu](mailto:nmank@colostate.edu)
 
 ## Version History
 
@@ -65,7 +68,7 @@ nmank@colostate.edu
 
 ## License
 
-See the LICENSE.md file for details
+See the `LICENSE.md` file for details
 
 <!-- ## Acknowledgments
 
