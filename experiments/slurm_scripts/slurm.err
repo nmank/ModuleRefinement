@@ -29,3 +29,50 @@ Also make sure that all modulefiles written in TCL start with the string
 
 
 
+Traceback (most recent call last):
+  File "/home/nmank/.conda/envs/env1/lib/python3.8/site-packages/urllib3/response.py", line 443, in _error_catcher
+    yield
+  File "/home/nmank/.conda/envs/env1/lib/python3.8/site-packages/urllib3/response.py", line 818, in read_chunked
+    chunk = self._handle_chunk(amt)
+  File "/home/nmank/.conda/envs/env1/lib/python3.8/site-packages/urllib3/response.py", line 762, in _handle_chunk
+    value = self._fp._safe_read(amt)
+  File "/home/nmank/.conda/envs/env1/lib/python3.8/http/client.py", line 614, in _safe_read
+    raise IncompleteRead(data, amt-len(data))
+http.client.IncompleteRead: IncompleteRead(4835 bytes read, 5405 more expected)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nmank/.conda/envs/env1/lib/python3.8/site-packages/requests/models.py", line 816, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/home/nmank/.conda/envs/env1/lib/python3.8/site-packages/urllib3/response.py", line 623, in stream
+    for line in self.read_chunked(amt, decode_content=decode_content):
+  File "/home/nmank/.conda/envs/env1/lib/python3.8/site-packages/urllib3/response.py", line 844, in read_chunked
+    self._original_response.close()
+  File "/home/nmank/.conda/envs/env1/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/home/nmank/.conda/envs/env1/lib/python3.8/site-packages/urllib3/response.py", line 460, in _error_catcher
+    raise ProtocolError("Connection broken: %r" % e, e)
+urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(4835 bytes read, 5405 more expected)', IncompleteRead(4835 bytes read, 5405 more expected))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nmank/ModuleRefinement/experiments/evaluate_modules/go_refined_modules.py", line 91, in <module>
+  File "./ModuleRefinement/utils.py", line 151, in module_significance
+    res = gp.profile(organism=organism,
+  File "/home/nmank/.conda/envs/env1/lib/python3.8/site-packages/gprofiler/gprofiler.py", line 100, in profile
+    r = requests.post(
+  File "/home/nmank/.conda/envs/env1/lib/python3.8/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/nmank/.conda/envs/env1/lib/python3.8/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/nmank/.conda/envs/env1/lib/python3.8/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/nmank/.conda/envs/env1/lib/python3.8/site-packages/requests/sessions.py", line 745, in send
+    r.content
+  File "/home/nmank/.conda/envs/env1/lib/python3.8/site-packages/requests/models.py", line 899, in content
+    self._content = b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+  File "/home/nmank/.conda/envs/env1/lib/python3.8/site-packages/requests/models.py", line 818, in generate
+    raise ChunkedEncodingError(e)
+requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(4835 bytes read, 5405 more expected)', IncompleteRead(4835 bytes read, 5405 more expected))
