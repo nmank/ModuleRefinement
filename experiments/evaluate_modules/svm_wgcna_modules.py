@@ -11,10 +11,7 @@ from orthrus.core.dataset import DataSet as DS
 
 import os
 
-import sys
-sys.path.append('/home/nmank/ModuleRefinement/ModuleRefinement')
-
-import utils as utl
+from ModuleRefinement import utils as utl
 
 import argparse
 

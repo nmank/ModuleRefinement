@@ -15,22 +15,16 @@ if __name__ == '__main__':
 
 
     parser = argparse.ArgumentParser()
-                        #default = [['module_expression', 1, 1, 'all', 'salmonella_Liver'],
-                        #           ['flag_mean', 1, 1, 'all', 'salmonella_Liver'],
-                        #           ['flag_median', 1, 1, 'all', 'salmonella_Liver']],
-    parser.add_argument("--methods", 
-                        default = [['module_expression', 1, 1, 'all', 'gse73072_hrv_48_64_shedder48_64'],
-                                   ['flag_mean', 1, 1, 'all', 'gse73072_hrv_48_64_shedder48_64'],
-                                   ['flag_median', 1, 1, 'all', 'gse73072_hrv_48_64_shedder48_64']],
-                        type = list, 
-                        help = "a list of lists of parameters: [[module representative, data dimension, center dimension, fold, dataset]]")
+    parser.add_argument("--methods_file", 'experiments/process_results/top_go_terms.py', type = str, help = "a list of lists of parameters: [[module representative, data dimension, center dimension, fold, dataset]]")
     parser.add_argument("--results_dir", default = 'experiments/results/', type = str, help = "path to results directory")
     parser.add_argument("--refined_modules_dir", default = 'experiments/refined_modules/', type = str, help = "path to refined modules directory")
     args = parser.parse_args()
 
-    params = args.methods
+    params_file = args.methods_file
     results_dir = args.results_dir
     refined_modules_dir = args.refined_modules_dir
+
+    params = np.array(pd.read_csv(params_file))
 
     go_results = pd.DataFrame(columns = 
                                 ['Data Set', 'Algorithm', 'Central Prototype', 

@@ -4,9 +4,7 @@ import os
 from sklearn.model_selection import StratifiedKFold
 import argparse
 
-import sys
-sys.path.append('/data4/mankovic/ModuleRefinement/ModuleRefinement')
-import utils as utl
+import ModuleRefinement.utils as utl
 
 
 '''
@@ -20,7 +18,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--data_dir", default = 'data', type = str, help = "path to data directory")
     parser.add_argument("--modules_dir", default = 'experiments/modules', type = str, help = "path to modules directory")
-    parser.add_argument("--results_dir", default = 'experiments/results/wgcna_rquared_gse_new.csv', type = str, 
+    parser.add_argument("--results_dir", default = 'experiments/results/wgcna_rquared.csv', type = str, 
                          help = "path to results directory")
     args = parser.parse_args()
 
@@ -47,8 +45,6 @@ if __name__ == '__main__':
             out_file = f'{modules_dir}/all/{file_name[:-4]}.pickle'
             prms[file_name[:-4]] = utl.wgcna_modules(data_all, species, out_file)
 
-            import IPython; IPython.embed()
-
             for dta, lbl in zip(class_data, unique_labels):
                 out_file = f'{modules_dir}/all/{file_name[:-4]}_{lbl}.pickle'
                 prms[file_name[:-4]+'_'+str(lbl)] = utl.wgcna_modules(dta, species, out_file)
@@ -58,7 +54,7 @@ if __name__ == '__main__':
             skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=0)
             skf.get_n_splits(data_all, labels_all)
 
-            fold_number = 0 #was 3
+            fold_number = 0 
             for train_index, test_index in skf.split(data_all, labels_all):
                 split_data = data_all.iloc[train_index]
                 split_labels = labels_all.iloc[train_index]

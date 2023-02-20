@@ -1,0 +1,37 @@
+[build-system]
+requires = ["calcom==1.0.2",
+            "gprofiler_official==1.0.0",
+            "ipython==8.7.0",
+            "matplotlib==3.5.3",
+            "networkx==2.8.6",
+            "numpy==1.23.2",
+            "orthrus==1.0.9",
+            "pandas==1.4.3",
+            "plotly==5.10.0",
+            "PyWGCNA==1.15.7",
+            "scikit_learn==1.2.0",
+            "scipy==1.9.3",
+            "torch==1.12.1",
+            "dill==0.3.6",
+            "flask==2.2.2",
+            "venn==0.1.3",
+            "ray==2.2.0"]
+
+[project]
+name = "ModuleRefinement"
+version = "0.0.9"
+authors = [
+  { name="Nathan Mankovich", email="nmank@colostate.edu" },
+]
+description = "A package for module refinement"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/nmank/ModuleRefinement"
+"Bug Tracker" = "https://github.com/nmank/ModuleRefinement/issues"
