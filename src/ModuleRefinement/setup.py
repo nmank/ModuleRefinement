@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="ModuleRefinement",
-    version="0.0.9",
+    version="0.0.11",
     author="Nate Mankovich",
     author_email="Nate.Mankovich@colostate.edu",
     description="A package for computing gene co-expression modules",
@@ -22,5 +22,5 @@ setuptools.setup(
     ],
     package_dir={"": "./"},
     packages=setuptools.find_packages("./"),
-    python_requires="==3.8.8",
+    python_requires=">=3.7",
 )

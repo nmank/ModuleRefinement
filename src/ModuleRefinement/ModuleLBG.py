@@ -121,7 +121,7 @@ class ModuleLBG(BaseEstimator):
         if dist_type in ['sine', 'sinesq', 'cosine']:
             dist = ca.calc_error_1_2([X], Y, dist_type)*weight
         elif dist_type == 'min_sinesq':
-            sing_vals = np.linalg.svd(X.T @ Y)[1]
+            sing_vals = np.linalg.svd(X.T @ Y)[0]
             dist = 1-np.min(sing_vals)**2
         elif dist_type in ['wt_euclidean', 'euclidean']:
             dist = np.linalg.norm(X-Y)*weight
