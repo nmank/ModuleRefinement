@@ -13,3 +13,5 @@ ModuleRefinement/__pycache__*
 ./examples/refined_modules/*
 ./experiments/modules/*
 ./exeriments/refined_modules/*
+./data/*salmonella*
+./sanity/refined_modules_sanity*

@@ -1,9 +1,6 @@
 #import sys
-
-#sys.path.append('/home/katrina/a/mankovic/FlagIRLS')
-import sys
-sys.path.append('./ModuleRefinement')
-import center_algorithms as ca
+#sys.path.append('../ModuleRefinement')
+from ModuleRefinement import center_algorithms as ca
 
 import orthrus
 from orthrus import core
@@ -21,7 +18,7 @@ import os
 
 import argparse
 
-import utils as utl
+from ModuleRefinement import utils as utl
 
 
 
