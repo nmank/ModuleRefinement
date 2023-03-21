@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: ModuleRefinement
-Version: 0.0.13
+Version: 0.0.14
 Summary: A package for module refinement
 Author-email: Nathan Mankovich <nmank@colostate.edu>
 Project-URL: Homepage, https://github.com/nmank/ModuleRefinement

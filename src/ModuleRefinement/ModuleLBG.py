@@ -118,25 +118,25 @@ class ModuleLBG(BaseEstimator):
     
     
     def calc_distance(self, X: np.array, Y: np.array, dist_type: str = 'euclidean', weight: float = 1) -> float:
-    '''
-    Calculate the distance between two subspace representatives or points in R^n
+        '''
+        Calculate the distance between two subspace representatives or points in R^n
 
-    Inputs:
-        X point 1 in R^(nxk)
-        Y point 2 in R^(nxr)
-        dist_type distance between the two points
-            'euclidan' ||X-Y||_2
-            'sine' chordal distance on Grassmannian
-            'sinesq' squared chordal distance on Grassmannian
-            'cosine' cosine^2  of principal angles (correlation)
-            'min_sinsq' the sine of the second smallest principal angle between X and Y
-            'wt_eucliden' weighted euclidean distance
-            'pearson_dist' pearson correlation distance
-        weight for weighted distances
-    
-    Output:
-        dist the distance between X and Y
-    '''
+        Inputs:
+            X point 1 in R^(nxk)
+            Y point 2 in R^(nxr)
+            dist_type distance between the two points
+                'euclidan' ||X-Y||_2
+                'sine' chordal distance on Grassmannian
+                'sinesq' squared chordal distance on Grassmannian
+                'cosine' cosine^2  of principal angles (correlation)
+                'min_sinsq' the sine of the second smallest principal angle between X and Y
+                'wt_eucliden' weighted euclidean distance
+                'pearson_dist' pearson correlation distance
+            weight for weighted distances
+        
+        Output:
+            dist the distance between X and Y
+        '''
         if dist_type in ['sine', 'sinesq', 'cosine']:
             dist = ca.calc_error_1_2([X], Y, dist_type)*weight
         elif dist_type == 'min_sinesq':
