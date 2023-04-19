@@ -70,11 +70,6 @@ Nathan Mankovich: [nmank@colostate.edu](mailto:nmank@colostate.edu)
 
 See the `LICENSE.md` file for details
 
-<!-- ## Acknowledgments
+## Acknowledgments
 
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46) -->
+Big thank you to [EricStern](https://github.com/estern95) for his help packaging the repository and ensuring reproducibility. Another thanks to [EricKehoe](https://github.com/ekehoe32) for his work on the code base for Pathway Expression Analysis which was used to run some of these examples.
