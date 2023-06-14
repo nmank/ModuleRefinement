@@ -10,7 +10,7 @@ See `examples/small_example.ipynb` for a notebook that details simple usage of M
 
 If you like this work, please consider citing us
 
-'''
+```
 @article{mankovich2023module,
   title={Module representatives for refining gene co-expression modules},
   author={Mankovich, Nathan and Andrews-Polymenis, Helene and Threadgill, David and Kirby, Michael},
@@ -21,7 +21,7 @@ If you like this work, please consider citing us
   year={2023},
   publisher={IOP Publishing}
 }
-'''
+```
 
 ## Getting Started
 
