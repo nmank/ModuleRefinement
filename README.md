@@ -6,6 +6,23 @@ ModuleRefinement is a package for gene co-expression module refinement. This pac
 
 See `examples/small_example.ipynb` for a notebook that details simple usage of ModuleRefinement along with PyWGCNA. 
 
+## How to Cite Our Work
+
+If you like this work, please consider citing us
+
+'''
+@article{mankovich2023module,
+  title={Module representatives for refining gene co-expression modules},
+  author={Mankovich, Nathan and Andrews-Polymenis, Helene and Threadgill, David and Kirby, Michael},
+  journal={Physical Biology},
+  volume={20},
+  number={4},
+  pages={045001},
+  year={2023},
+  publisher={IOP Publishing}
+}
+'''
+
 ## Getting Started
 
 ### Dependencies
